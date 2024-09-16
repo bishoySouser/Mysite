@@ -1,255 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bishoy Souser</title>
-    <link rel="icon" href="imgs/icon-title.png"/>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="css/master.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Russo+One&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"
-      integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE="
-      crossorigin="anonymous"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div id="app-profile">
-      <!-- Navbar -->
-      <nav id="nav" class="navbar navbar-expand-lg navbar-light fixed-top py-4">
-        <div class="container">
-          <a class="navbar-brand" href="#app-profile">Bishoy</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#skills">About <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#servies">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishoy Souser - Software Engineer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #0c0e0f;
+            --background-color: #f4f6f9;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .left-column, .right-column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .photo-container {
+            margin-bottom: 20px;
+        }
+
+        .photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+
+        .contact-info {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .project, .experience, .education {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project h3, .experience h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skill-item {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="header">
+                <div class="photo-container">
+                    <img src="imgs/profile.png" alt="Bishoy Souser" class="photo">
+                </div>
+                <h1>BISHOY SOUSER</h1>
+                <p>Software Engineer</p>
+            </div>
+            
+            <div class="contact-info">
+                <p>📞 +2012 2021 2168 | +2015 5492 8668</p>
+                <p>📧 Bishoysouser@gmail.com</p>
+                <p>🔗 <a href="https://linkedin.com/in/bishoysouser">linkedin.com/in/bishoysouser</a></p>
+                <p>🐙 <a href="https://github.com/bishoySouser">github.com/bishoySouser</a></p>
+            </div>
+
+            <h2>Latest Projects</h2>
+            <div class="project">
+                <h3>HR SYSTEM</h3>
+                <p><em>Laravel, Vhorus</em></p>
+                <ul>
+                    <li>Developed an HR system with features for vacation management, work-from-home tracking, insurance, policy documents, and IT ticketing.</li>
+                    <li>Implemented a two-stage approval process for vacation requests.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>AI INTEGRATION PROJECT</h3>
+                <p><em>Laravel, Vhorus</em></p>
+                <ul>
+                    <li>Developed a project integrating ChatGPT API to generate meta titles, descriptions, and SEO keywords.</li>
+                    <li>Enhanced SEO capabilities for various applications.</li>
+                    <li>Project URL: <a href="https://apps.bsocial-eg.com/deledeal_8/public/ai">https://apps.bsocial-eg.com/deledeal_8/public/ai</a></li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h3>Newspaper</h3>
+                <p><em>Flask, Freelance</em></p>
+                <ul>
+                    <li>The CRUD Newspaper Management System is a Flask-based web app that allows users to create, read, update, and delete news articles.</li>
+                    <li>Features intuitive article management, categorization, and search functionality.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li class="skill-item">PHP</li>
+                <li class="skill-item">JavaScript</li>
+                <li class="skill-item">SQL</li>
+                <li class="skill-item">HTML & CSS</li>
+                <li class="skill-item">Python</li>
+                <li class="skill-item">Laravel</li>
+                <li class="skill-item">Bootstrap</li>
+                <li class="skill-item">NuxtJs</li>
+                <li class="skill-item">VueJs</li>
+                <li class="skill-item">Flask</li>
+                <li class="skill-item">Git</li>
+                <li class="skill-item">NodeJS</li>
+                <li class="skill-item">Ajax</li>
+                <li class="skill-item">RESTful API</li>
             </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- header -->
-      <header class="mb-5">
-        <div class="header-gro">
-          <img
-            class="img-fluid"
-            src="imgs/my-photo.png"
-            width="150"
-            height="150"
-            alt=""
-          />
-          <h5 style="font-family: 'Russo One', sans-serif;">
-            Hi! I'm Bishoy Souser
-          </h5>
-          <p id="job" style="font-family: 'Merriweather Sans', sans-serif;">
-            I'm Web Developer
-          </p>
-        </div>
-      </header>
-      <!-- skills -->
-      <section id="skills" class="skills py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-6 skill-left">
-              <h5>Hi,There! I'm Bishoy Souser</h5>
-              <p>
-                Web development broadly refers to the tasks associated with
-                developing websites for hosting via intranet or internet. The
-                web development process includes web design, web content
-                development, client-side/server-side scripting and network
-                security configuration, among other tasks.
-              </p>
-              <ul class="row list-unstyled">
-                <div class="col-md-6">
-                  <li class="col-sm-12 py-3">
-                    <i class="fas fa-envelope"></i>
-                    <strong>Email:</strong>
-                    <p>Bishoysouser@gmail.com</p>
-                  </li>
-                  <li class="col-sm-12 py-3">
-                    <i class="fas fa-calendar-alt"></i>
-                    <strong>Date of Brith:</strong>
-                    <p>27 Oct 1993</p>
-                  </li>
-                </div>
-                <div class="col-md-6">
-                  <li class="col-sm-12 py-3">
-                    <i class="fas fa-map-marker"></i>
-                    <strong>Location:</strong>
-                    <p>Cairo, Egypt</p>
-                  </li>
-                  <li class="col-sm-12 py-3">
-                    <i class="fas fa-phone-alt"></i>
-                    <strong>Phone:</strong>
-                    <p>+20-122-021-2168</p>
-                  </li>
-                </div>
-              </ul>
+
+            <h2>Work Experience</h2>
+            <div class="experience">
+                <h3>Vhorus – Senior Backend Developer</h3>
+                <p>Aug 2020 - Present</p>
             </div>
-            <div class="col-12 col-lg-6">
-              <section class="my-3">
-                <p>Html&amp;Css</p>
-                <div class="progress">
-                  <div
-                    class="progress-bar bg-success"
-                    role="progressbar"
-                    style="width: 90%"
-                    aria-valuenow="25"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </section>
-              <section class="my-3">
-                <p>Javascript</p>
-                <div class="progress">
-                  <div
-                    class="progress-bar bg-info"
-                    role="progressbar"
-                    style="width: 70%"
-                    aria-valuenow="50"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </section>
-              <section class="my-3">
-                <p>Php&amp;SQL</p>
-                <div class="progress">
-                  <div
-                    class="progress-bar bg-warning"
-                    role="progressbar"
-                    style="width: 90%"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </section>
-              <section class="my-3">
-                <p>Laravel Framwork</p>
-                <div class="progress">
-                  <div
-                    class="progress-bar bg-danger"
-                    role="progressbar"
-                    style="width: 80%"
-                    aria-valuenow="100"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </section>
+            <div class="experience">
+                <h3>Think Navy – Full Stack Developer</h3>
+                <p>May 2019 – Jan 2020</p>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- my-servies -->
-      <section id="servies" class="my-servies py-5">
-        <div class="container">
-          <h2>My Services</h2>
-          <div class="row my-5">
-            <div class="col-md-6 web-development pb-3">
-              <div class="icon-servies">
-                <i class="fas fa-laptop-code fa-2x mb-2"></i>
-              </div>
-              <h5>web development</h5>
-              <p>
-                Web development broadly refers to the tasks associated with
-                developing websites for hosting via intranet or internet. The
-                web development process includes web design, web content
-                development, client-side/server-side scripting and network
-                security configuration, among other tasks.
-              </p>
+            <div class="experience">
+                <h3>Thebes Academy – Teaching Assistant</h3>
+                <p>Sep 2016 – Jan 2017</p>
             </div>
-            <div class="col-md-6 website-design">
-              <div class="icon-servies">
-                <i class="fas fa-laptop fa-2x mb-2"></i>
-              </div>
-              <h5>website design</h5>
-              <p>
-                Web design encompasses many different skills and disciplines in
-                the production and maintenance of websites. The different areas
-                of web design include web graphic design, interface design,
-                authoring, including standardised code and proprietary software,
-                user experience design.
-              </p>
+
+            <h2>Education</h2>
+            <div class="education">
+                <h3>B.S in Management Information Systems</h3>
+                <p>Thebes Academy</p>
+                <p>Sep 2012 - May 2016</p>
+                <p>GPA 3.86/4.00</p>
             </div>
-          </div>
+
+            <h2>Misc</h2>
+            <ul>
+                <li><strong>Certifications:</strong> ALX AiCE - AI Career Essentials (2024) projects, CS50 (Harvard University) (Oct 2019) me50/bishoySouser.</li>
+                <li><strong>Codewars:</strong> <a href="https://www.codewars.com/users/bishoySouser">https://www.codewars.com/users/bishoySouser</a>, active participant solving coding challenges 3.</li>
+                <li><strong>Languages:</strong> English - Intermediate, Arabic - native speaker.</li>
+                <li><strong>Honors:</strong> Won prize for "quick KIT" application at Huawei Developers AGDA event (Oct 2019)</li>
+            </ul>
         </div>
-      </section>
-      <!-- my-protfolio -->
-      <section class="my-protfolio"></section>
-      <!-- contact-me -->
-      <section id="contact" class="contact-me py-5">
-        <div class="container">
-          <h2>Contact Me</h2>
-          <ul class="row list-unstyled my-5 mx-5">
-            <li class="col-12 phone-contact col-lg-4">
-              <i class="fas fa-phone fa-rotate-90 mb-2 fa-spin"></i>
-              <span
-                ><a href="https://wa.me/201220212168?text=Hi%20Bishoy!"
-                  >+20-122-021-2168</a
-                ></span
-              >
-            </li>
-            <li class="col-12 location-contact col-lg-4">
-              <i class="fas fa-street-view mb-2 fa-spin"></i>
-              <span
-                ><a
-                  href="https://www.google.com/maps/place/Maadi,+Cairo+Governorate/@29.9593243,31.2598282,13z/data=!3m1!4b1!4m8!1m2!2m1!1sKozzia,+Maadi,+Cairo,+Egypt!3m4!1s0x14583809b8f551e3:0x6265c5febb8ab4a3!8m2!3d29.9626868!4d31.2769389"
-                  >Kozzia, Maadi, Cairo, Egypt</a
-                ></span
-              >
-            </li>
-            <li class="col-12 email-contact col-lg-4">
-              <i class="fas fa-envelope mb-2 fa-spin"></i>
-              <span
-                ><a href="mailto:BishoySouser@gmail.com"
-                  >BishoySouser@gmail.com</a
-                ></span
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- footer -->
-      <section class="footer py-5">
-        <div class="container">
-          <h6>Bishoy Souser</h6>
-          <ul class="list-unstyled py-3">
-            <li><a href="https://www.facebook.com/BishoySouser" target="_blank"><i class="fab fa-facebook fa-2x px-2" style="color:#3a559f"></i></a></li>
-            <li><a href="https://eg.linkedin.com/in/bishoysouser" target="_blank"><i class="fab fa-linkedin fa-2x px-2" style="color:#007bb5"></i></a></li>
-            <li><a href="https://github.com/bishoySouser" target="_blank"><i class="fab fa-github fa-2x px-2" style="color:#000000"></a></i></li>
-          </ul>
-          <p>
-            BishoySouser&copy;<script type="text/javascript">
-              var dt = new Date();
-              document.write(dt.getFullYear());
-            </script>, Designed By <strong>Bishoy Souser</strong>
-          </p>
-        </div>
-      </section>
     </div>
-    <script src="js/master.js"></script>
-  </body>
+</body>
 </html>
