@@ -671,11 +671,12 @@ p {
 /* Fixed Sidebar */
 .fixed-sidebar {
     position: fixed;
-    right: 20px;
-    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    gap: 20px;
     z-index: 1001;
 }
 
