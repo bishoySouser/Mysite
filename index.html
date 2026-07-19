@@ -1,237 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bishoy Souser - Software Engineer</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-        
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #0c0e0f;
-            --background-color: #f4f6f9;
-            --text-color: #333;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .left-column, .right-column {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .photo-container {
-            margin-bottom: 20px;
-        }
-
-        .photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--secondary-color);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: var(--primary-color);
-            font-size: 2.5em;
-            margin-bottom: 5px;
-        }
-
-        h2 {
-            color: var(--secondary-color);
-            font-size: 1.5em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 5px;
-        }
-
-        .contact-info {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .project, .experience, .education {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .project h3, .experience h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .skill-item {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bishoy Souser — Senior Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <div class="container">
-        <div class="left-column">
-            <div class="header">
-                <div class="photo-container">
-                    <img src="imgs/profile.png" alt="Bishoy Souser" class="photo">
-                </div>
-                <h1>BISHOY SOUSER</h1>
-                <p>Software Engineer</p>
-            </div>
-            
-            <div class="contact-info">
-                <p>📞 +2012 2021 2168 | +2015 5492 8668</p>
-                <p>📧 Bishoysouser@gmail.com</p>
-                <p>🔗 <a href="https://linkedin.com/in/bishoysouser">linkedin.com/in/bishoysouser</a></p>
-                <p>🐙 <a href="https://github.com/bishoySouser">github.com/bishoySouser</a></p>
-            </div>
 
-            <h2>Education</h2>
-            <div class="education">
-                <h3>B.S in Management Information Systems</h3>
-                <p>Thebes Academy</p>
-                <p>Sep 2012 - May 2016</p>
-                <p>GPA 3.86/4.00</p>
-            </div>
+  <div class="spotlight" id="spotlight"></div>
 
-            <h2>Work Experience</h2>
-            <div class="experience">
-                <h3>Vhorus – Senior Backend Developer</h3>
-                <p>Aug 2020 - Present</p>
+  <div class="layout">
+
+    <!-- LEFT PANEL -->
+    <aside class="left">
+      <div>
+        <div class="profile-wrapper">
+          <img src="imgs/profile.png" alt="Bishoy Souser" class="profile-img" />
+        </div>
+        <h1 class="name">Bishoy Souser</h1>
+        <p class="title">Senior Backend Developer</p>
+        <p class="bio">I build scalable, clean-architecture systems that drive real business outcomes — from
+          multi-tenant SaaS to AI-integrated platforms.</p>
+
+        <nav>
+          <a class="nav-item active" data-section="about" href="#about">
+            <span class="nav-line"></span>About
+          </a>
+          <a class="nav-item" data-section="experience" href="#experience">
+            <span class="nav-line"></span>Experience
+          </a>
+          <a class="nav-item" data-section="projects" href="#projects">
+            <span class="nav-line"></span>Projects
+          </a>
+          <a class="nav-item" data-section="skills" href="#skills">
+            <span class="nav-line"></span>Skills
+          </a>
+          <a class="nav-item" data-section="certifications" href="#certifications">
+            <span class="nav-line"></span>Certifications
+          </a>
+        </nav>
+
+        <div class="socials">
+          <!-- GitHub -->
+          <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:bishoysouser@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer">
+        Coded with care in Cairo, Egypt.<br>
+        <a href="mailto:bishoysouser@gmail.com">bishoysouser@gmail.com</a> ·
+        <a href="tel:+201220212168">+20 122 021 2168</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT PANEL -->
+    <main class="right">
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="section-label">About</div>
+        <div class="about">
+          <p>I'm a backend developer with <strong>5+ years of experience</strong> building scalable web applications. 
+            With a strong foundation in <strong>PHP and Laravel</strong>, I am currently expanding my expertise into <strong>Java</strong> 
+            and <strong>Spring Boot</strong>. I am diving deep into core Java concepts, such as understanding the <strong>object lifecycle</strong>, while applying this knowledge hands-on.</p>
+          <p>My work spans digital transformation, multi-tenant architecture, and AI-integrated platforms. At
+            <strong>Vhorus</strong>, I architected <a href="https://convert-em.com" target="_blank"
+              rel="noopener">Convert-EM</a> — a multi-tenant lead conversion platform that delivered 8,600+ qualified
+            leads for an automotive client and hit 100% admission targets for a university client, powered by Botpress
+            AI agents across WhatsApp, Instagram, and Web.
+          </p>
+          <p>I care about <strong>clean architecture</strong> — SOLID principles, design patterns, well-structured
+            layering — and about systems that are fast, maintainable, and built to last. I am currently learning Spring Boot in depth by building <strong>Ventory</strong>, a full inventory management system from scratch.</p>
+          <p>Outside of code, I'm based in <strong>Cairo, Egypt</strong></p>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <div class="section-label">Experience</div>
+
+        <div class="exp-item">
+          <div class="exp-date">2026 —<br>Present</div>
+          <div>
+            <div class="exp-role">
+              Backend Developer (Java) · Personal Project
+              <span class="arrow">↗</span>
             </div>
-            <div class="experience">
-                <h3>Think Navy – Full Stack Developer</h3>
-                <p>May 2019 – Jan 2020</p>
+            <div class="exp-company">Ventory — Inventory Management System</div>
+            <ul class="exp-desc">
+              <li>Building Ventory in Java Spring Boot to apply real-world backend architecture patterns.</li>
+              <li>Implemented layered architecture: Controllers, Services, Repositories, DTOs, Mappers, and custom
+                Global Exception Handling.</li>
+              <li>Entities include Products, Categories, Suppliers, and Stock Movements with enum-based movement types.
+              </li>
+              <li>Features: CRUD, real-time stock tracking, role-based access control (Admin/Manager/Staff), JWT auth.
+              </li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Spring Data JPA</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JWT</span>
+              <span class="tag">Maven</span>
             </div>
-            <div class="experience">
-                <h3>Thebes Academy – Teaching Assistant</h3>
-                <p>Sep 2016 – Jan 2017</p>
-            </div>
-            
+          </div>
         </div>
 
-        <div class="right-column">
-          <h2>Latest Projects</h2>
-            <div class="project">
-                <h3>HR SYSTEM</h3>
-                <p><em>Laravel, Vhorus</em></p>
-                <ul>
-                    <li>Developed an HR system with features for vacation management, work-from-home tracking, insurance, policy documents, and IT ticketing.</li>
-                    <li>Implemented a two-stage approval process for vacation requests.</li>
-                </ul>
+        <div class="exp-item">
+          <div class="exp-date">2025<br>May–Nov</div>
+          <div>
+            <div class="exp-role">
+              <a href="https://ms-sportsacademy.com" target="_blank" rel="noopener">Backend Developer · Rollinreal</a>
+              <span class="arrow">↗</span>
             </div>
-
-            <div class="project">
-                <h3>AI INTEGRATION PROJECT</h3>
-                <p><em>Laravel, Vhorus</em></p>
-                <ul>
-                    <li>Developed a project integrating ChatGPT API to generate meta titles, descriptions, and SEO keywords.</li>
-                    <li>Enhanced SEO capabilities for various applications.</li>
-                    <li>Project URL: <a href="https://apps.bsocial-eg.com/deledeal_8/public/ai">https://apps.bsocial-eg.com/deledeal_8/public/ai</a></li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h3>Newspaper</h3>
-                <p><em>Flask, Freelance</em></p>
-                <ul>
-                    <li>The CRUD Newspaper Management System is a Flask-based web app that allows users to create, read, update, and delete news articles.</li>
-                    <li>Features intuitive article management, categorization, and search functionality.</li>
-                </ul>
-            </div>
-
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li class="skill-item">PHP</li>
-                <li class="skill-item">JavaScript</li>
-                <li class="skill-item">SQL</li>
-                <li class="skill-item">HTML & CSS</li>
-                <li class="skill-item">Python</li>
-                <li class="skill-item">Laravel</li>
-                <li class="skill-item">Bootstrap</li>
-                <li class="skill-item">NuxtJs</li>
-                <li class="skill-item">VueJs</li>
-                <li class="skill-item">Flask</li>
-                <li class="skill-item">Git</li>
-                <li class="skill-item">NodeJS</li>
-                <li class="skill-item">Ajax</li>
-                <li class="skill-item">RESTful API</li>
+            <div class="exp-company">Freelance</div>
+            <ul class="exp-desc">
+              <li>Built a full operational management system for MS Sports Academy — 5 branches, 600+ athletes.</li>
+              <li>Developed a session booking system with capacity management, confirmations, and automated reminders.
+              </li>
+              <li>Implemented packages &amp; subscriptions management with usage tracking and renewals.</li>
+              <li>Automated commission-based trainer salary calculations and weekly branch reports via Cron Jobs.</li>
             </ul>
-
-            <h2>Misc</h2>
-            <ul>
-                <li><strong>Certifications:</strong> ALX AiCE - AI Career Essentials (2024) projects, CS50 (Harvard University) (Oct 2019) me50/bishoySouser.</li>
-                <li><strong>Codewars:</strong> <a href="https://www.codewars.com/users/bishoySouser">https://www.codewars.com/users/bishoySouser</a>, active participant solving coding challenges 3.</li>
-                <li><strong>Languages:</strong> English - Intermediate, Arabic - native speaker.</li>
-                <li><strong>Honors:</strong> Won prize for "quick KIT" application at Huawei Developers AGDA event (Oct 2019)</li>
-            </ul>
+            <div class="tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Cron Jobs</span>
+              <span class="tag">RESTful APIs</span>
+            </div>
+          </div>
         </div>
-    </div>
+
+        <div class="exp-item">
+          <div class="exp-date">2020 —<br>Present</div>
+          <div>
+            <div class="exp-role">
+              Senior Backend Developer · Vhorus
+              <span class="arrow">↗</span>
+            </div>
+            <div class="exp-company">Full-time</div>
+            <ul class="exp-desc">
+              <li>Architected Convert-EM, a multi-tenant lead conversion platform delivering 8,600+ qualified leads for
+                an automotive client and 100% admission target for a university client.</li>
+              <li>Integrated Botpress AI agents for automated lead qualification across WhatsApp, Instagram, and Web.
+              </li>
+              <li>Resolved 50+ critical SEO issues via Google Search Console — increased organic traffic 25%, reduced
+                duplicate pages 40%.</li>
+              <li>Developed Arabia-Holding.com real estate portal with custom CRM, SEO tooling, and Redis caching.</li>
+              <li>Managed complex multi-tenant architectures and optimized high-traffic APIs using advanced caching and
+                query optimization.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">Filament</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">2019 —<br>2022</div>
+          <div>
+            <div class="exp-role">
+              Full Stack Developer · ThinkNavy
+              <span class="arrow">↗</span>
+            </div>
+            <div class="exp-company">Full-time</div>
+            <ul class="exp-desc">
+              <li>Led end-to-end web development projects within the PHP / Laravel ecosystem.</li>
+              <li>Managed SQL database structures for efficient data retrieval and storage across multiple client
+                projects.</li>
+              <li>Collaborated with cross-functional teams to meet technical and business objectives on time.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="section-label">Projects</div>
+
+        <div class="project-item">
+          <div class="project-img-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
+              <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+              <line x1="12" y1="12" x2="12" y2="16" />
+              <line x1="10" y1="14" x2="14" y2="14" />
+            </svg>
+          </div>
+          <div>
+            <div class="project-title">
+              Ventory — Inventory Management System
+              <span class="arrow">↗</span>
+            </div>
+            <p class="project-desc">Spring Boot system with CRUD, real-time stock tracking, role-based access control
+              (Admin/Manager/Staff), and JWT auth. Layered architecture with Controllers, Services, Repositories, DTOs,
+              and Mappers.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">JWT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-img-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 00-3-3.87" />
+              <path d="M16 3.13a4 4 0 010 7.75" />
+            </svg>
+          </div>
+          <div>
+            <div class="project-title">
+              <a href="https://convert-em.com" target="_blank" rel="noopener">Convert-EM.com</a>
+              <span class="arrow">↗</span>
+            </div>
+            <p class="project-desc">Multi-tenant lead conversion platform with Botpress AI agents for lead qualification
+              across WhatsApp, Instagram, and Web — 8,600+ qualified leads delivered. Centralized admin panel with
+              real-time lead intelligence, human moderation, and reactivation pipeline.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">Laravel</span>
+              <span class="tag">Filament</span>
+              <span class="tag">Botpress AI</span>
+              <span class="tag">Multi-tenancy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-img-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <div>
+            <div class="project-title">
+              <a href="https://ms-sportsacademy.com" target="_blank" rel="noopener">MS Sports Academy</a>
+              <span class="arrow">↗</span>
+            </div>
+            <p class="project-desc">Full operational management system for 5 branches and 600+ athletes. Covers session
+              booking with capacity management, subscription packages, automated commission-based trainer salary
+              calculations, and weekly branch reports via Cron Jobs.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Cron Jobs</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-img-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg>
+          </div>
+          <div>
+            <div class="project-title">
+              <a href="https://arabia-holding.com" target="_blank" rel="noopener">Arabia-Holding.com</a>
+              <span class="arrow">↗</span>
+            </div>
+            <p class="project-desc">Corporate real estate portal with custom CRM, full SEO tooling (meta tags, sitemaps,
+              schema markup), dynamic project portfolios, news/media center, and Redis caching for high-traffic API
+              optimization.</p>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">Laravel</span>
+              <span class="tag">Redis</span>
+              <span class="tag">SEO</span>
+              <span class="tag">Custom CRM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="section-label">Skills</div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <div class="skill-group-name">Languages</div>
+            <div class="skill-list">
+              <span class="skill-pill">PHP</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Frameworks</div>
+            <div class="skill-list">
+              <span class="skill-pill">Laravel</span>
+              <span class="skill-pill">Spring Boot</span>
+              <span class="skill-pill">NestJS</span>
+              <span class="skill-pill">Flask</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Laravel Ecosystem</div>
+            <div class="skill-list">
+              <span class="skill-pill">Filament</span>
+              <span class="skill-pill">Backpack</span>
+              <span class="skill-pill">Livewire</span>
+              <span class="skill-pill">Laravel Echo</span>
+              <span class="skill-pill">Reverb</span>
+              <span class="skill-pill">WebSockets</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Databases</div>
+            <div class="skill-list">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">Redis</span>
+              <span class="skill-pill">Eloquent ORM</span>
+              <span class="skill-pill">Hibernate/JPA</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Security</div>
+            <div class="skill-list">
+              <span class="skill-pill">JWT</span>
+              <span class="skill-pill">Laravel Sanctum</span>
+              <span class="skill-pill">OAuth2</span>
+              <span class="skill-pill">Spring Security</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Architecture</div>
+            <div class="skill-list">
+              <span class="skill-pill">MVC</span>
+              <span class="skill-pill">SOLID</span>
+              <span class="skill-pill">Multi-Tenancy</span>
+              <span class="skill-pill">Factory</span>
+              <span class="skill-pill">Repository</span>
+              <span class="skill-pill">Observer</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">DevOps</div>
+            <div class="skill-list">
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">Linux</span>
+              <span class="skill-pill">Nginx</span>
+              <span class="skill-pill">GitHub Actions</span>
+              <span class="skill-pill">Maven</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Other</div>
+            <div class="skill-list">
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">Agile/Scrum</span>
+              <span class="skill-pill">Postman</span>
+              <span class="skill-pill">R2 Storage</span>
+              <span class="skill-pill">Cloudflare CDN</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="certifications">
+        <div class="section-label">Certifications</div>
+        <div class="cert-list">
+          <div class="cert-item">
+            <div class="cert-icon">🎓</div>
+            <div>
+              <div class="cert-name">ALX AiCE — AI Career Essentials</div>
+              <div class="cert-org">ALX Africa</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">☕</div>
+            <div>
+              <div class="cert-name">Spring Boot 3 Essential Training</div>
+              <div class="cert-org">LinkedIn Learning</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">🎓</div>
+            <div>
+              <div class="cert-name">CS50's Introduction to Computer Science</div>
+              <div class="cert-org">Harvard University / edX</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon">🐍</div>
+            <div>
+              <div class="cert-name">Crash Course on Python</div>
+              <div class="cert-org">Google / Coursera</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:48px">
+          <div class="section-label">Education</div>
+          <div class="cert-item">
+            <div class="cert-icon">🏛</div>
+            <div>
+              <div class="cert-name">Bachelor of Management Information Systems (MIS)</div>
+              <div class="cert-org">Thebes Academy · 2012–2016 · GPA 3.73 / 4.0</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
