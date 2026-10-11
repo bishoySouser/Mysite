@@ -15,19 +15,19 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 
 <body>
 
   <div class="site-wrapper">
 
-    <!-- HERO CARD (Carl Hauser Signature Layout) -->
-    <header class="ch-card hero-card" id="top">
+    <!-- HERO CARD (Carl Hauser Layout + BDSN Physics) -->
+    <header class="ch-card hero-card bdsn-reveal" id="top">
       <div class="hero-top-row">
         <!-- Left: Hello Greeting -->
         <div>
-          <h1 class="hero-hello" id="heroHello" title="Click to wave!">
+          <h1 class="hero-hello magnetic-elem" id="heroHello" title="Click to wave!">
             Hello <span class="wave-hand">👋</span>
           </h1>
           <p class="hero-subhead">Bishoy Souser · Senior Backend Developer</p>
@@ -35,32 +35,32 @@
 
         <!-- Center: 2-Column Nav with Circle Plus Icons -->
         <nav class="ch-nav-menu" aria-label="Main Navigation">
-          <a href="#about" class="ch-nav-link">
+          <a href="#about" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Process
           </a>
-          <a href="#experience" class="ch-nav-link">
+          <a href="#experience" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Career
           </a>
-          <a href="#projects" class="ch-nav-link">
+          <a href="#projects" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Systems
           </a>
-          <a href="#skills" class="ch-nav-link">
+          <a href="#skills" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Stack
           </a>
-          <a href="#certifications" class="ch-nav-link">
+          <a href="#certifications" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> Credentials
           </a>
-          <a href="#contact" class="ch-nav-link">
+          <a href="#contact" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> Contact
           </a>
         </nav>
 
         <!-- Right: Social Links -->
         <div class="ch-socials-col">
-          <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" class="ch-ext-link">GitHub</a>
-          <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" class="ch-ext-link">LinkedIn</a>
-          <a href="mailto:bishoysouser@gmail.com" class="ch-ext-link">Email</a>
-          <a href="tel:+201220212168" class="ch-ext-link">+20 122 021 2168</a>
+          <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" class="ch-ext-link magnetic-elem">GitHub</a>
+          <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" class="ch-ext-link magnetic-elem">LinkedIn</a>
+          <a href="mailto:bishoysouser@gmail.com" class="ch-ext-link magnetic-elem">Email</a>
+          <a href="tel:+201220212168" class="ch-ext-link magnetic-elem">+20 122 021 2168</a>
         </div>
       </div>
 
@@ -70,7 +70,7 @@
           This is the backend process. Scalable microservices, clean domain architectures, and high-throughput systems built with Java, Spring Boot & Laravel.
         </p>
 
-        <div class="hero-live-clock" title="Cairo Live Time">
+        <div class="hero-live-clock magnetic-elem" title="Cairo Live Time">
           <span class="live-dot"></span>
           <span id="liveClock">Cairo EET --:--:--</span>
         </div>
@@ -78,19 +78,47 @@
     </header>
 
     <!-- SECTION FILTER BAR (Carl Hauser Gallery Filter Switcher) -->
-    <div class="ch-card filter-strip-card">
-      <button class="filter-pill active" data-filter="all">All</button>
-      <button class="filter-pill" data-filter="process">The Process</button>
-      <button class="filter-pill" data-filter="systems">The Systems</button>
-      <button class="filter-pill" data-filter="career">The Career</button>
-      <button class="filter-pill" data-filter="stack">The Stack</button>
-      <button class="filter-pill" data-filter="credentials">Credentials</button>
+    <div class="ch-card filter-strip-card bdsn-reveal">
+      <button class="filter-pill active magnetic-elem" data-filter="all">All</button>
+      <button class="filter-pill magnetic-elem" data-filter="process">The Process</button>
+      <button class="filter-pill magnetic-elem" data-filter="systems">The Systems</button>
+      <button class="filter-pill magnetic-elem" data-filter="career">The Career</button>
+      <button class="filter-pill magnetic-elem" data-filter="stack">The Stack</button>
+      <button class="filter-pill magnetic-elem" data-filter="credentials">Credentials</button>
     </div>
 
-    <!-- THE PROCESS (About & Stats) -->
-    <section class="ch-card" id="about" data-category="process">
+    <!-- KINETIC MARQUEE STRIP (BDSN Studio Signature Ticker) -->
+    <div class="ch-card marquee-strip-card bdsn-reveal" aria-label="Core Engineering Disciplines">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span><span class="marquee-accent">✦</span> SCALABLE ARCHITECTURES</span>
+          <span><span class="marquee-accent">✦</span> CLEAN DOMAIN LOGIC</span>
+          <span><span class="marquee-accent">✦</span> HIGH-THROUGHPUT SYSTEMS</span>
+          <span><span class="marquee-accent">✦</span> JAVA SPRING BOOT</span>
+          <span><span class="marquee-accent">✦</span> LARAVEL &amp; FILAMENT</span>
+          <span><span class="marquee-accent">✦</span> MULTI-TENANT ARCHITECTURE</span>
+          <span><span class="marquee-accent">✦</span> REDIS CACHING</span>
+          <span><span class="marquee-accent">✦</span> BOTPRESS AI AGENTS</span>
+          <span><span class="marquee-accent">✦</span> MYSQL &amp; POSTGRESQL</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span><span class="marquee-accent">✦</span> SCALABLE ARCHITECTURES</span>
+          <span><span class="marquee-accent">✦</span> CLEAN DOMAIN LOGIC</span>
+          <span><span class="marquee-accent">✦</span> HIGH-THROUGHPUT SYSTEMS</span>
+          <span><span class="marquee-accent">✦</span> JAVA SPRING BOOT</span>
+          <span><span class="marquee-accent">✦</span> LARAVEL &amp; FILAMENT</span>
+          <span><span class="marquee-accent">✦</span> MULTI-TENANT ARCHITECTURE</span>
+          <span><span class="marquee-accent">✦</span> REDIS CACHING</span>
+          <span><span class="marquee-accent">✦</span> BOTPRESS AI AGENTS</span>
+          <span><span class="marquee-accent">✦</span> MYSQL &amp; POSTGRESQL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE PROCESS (About & Animated Stats) -->
+    <section class="ch-card bdsn-reveal" id="about" data-category="process">
       <div class="about-grid">
-        <!-- Portrait Frame -->
+        <!-- Portrait Frame with 3D Magnetic Tilt -->
         <div class="about-photo-wrap">
           <img src="imgs/profile.png" alt="Bishoy Souser" />
           <div class="about-meta-tag">Bishoy · Cairo, EG</div>
@@ -119,22 +147,22 @@
             </p>
           </div>
 
-          <!-- Highlight Metric Boxes -->
+          <!-- Highlight Metric Boxes with Animated Count-Up -->
           <div class="about-stats-row">
             <div class="stat-box">
-              <div class="stat-num">5+</div>
+              <div class="stat-num" data-target="5" data-suffix="+">0+</div>
               <div class="stat-desc">Years Backend Experience</div>
             </div>
             <div class="stat-box">
-              <div class="stat-num">8.6k+</div>
+              <div class="stat-num" data-target="8.6" data-suffix="k+">0k+</div>
               <div class="stat-desc">Qualified Leads (Convert-EM)</div>
             </div>
             <div class="stat-box">
-              <div class="stat-num">5</div>
+              <div class="stat-num" data-target="5" data-suffix="">0</div>
               <div class="stat-desc">Branches Scaled (MS Sports)</div>
             </div>
             <div class="stat-box">
-              <div class="stat-num">100%</div>
+              <div class="stat-num" data-target="100" data-suffix="%">0%</div>
               <div class="stat-desc">Target Admissions Delivered</div>
             </div>
           </div>
@@ -143,18 +171,18 @@
     </section>
 
     <!-- SECTION HEADER: THE SYSTEMS -->
-    <div class="ch-card section-header-card" data-category="systems">
+    <div class="ch-card section-header-card bdsn-reveal" data-category="systems">
       <h2 class="section-title">
         The Systems <span class="ch-badge-yellow">Active Works</span>
       </h2>
       <span class="section-counter">04 SCHEMATICS · ARCHITECTURE</span>
     </div>
 
-    <!-- THE SYSTEMS (Featured Projects Grid with Carl Hauser Schematics) -->
+    <!-- THE SYSTEMS (Featured Projects Grid with 3D Tilt & Schematics) -->
     <section class="projects-grid" id="projects" data-category="systems">
 
       <!-- PROJECT 1: VENTORY -->
-      <article class="ch-card project-card">
+      <article class="ch-card project-card bdsn-reveal">
         <div>
           <div class="project-top-meta">
             <span>2026 — PRESENT · JAVA / SPRING BOOT</span>
@@ -191,7 +219,7 @@
       </article>
 
       <!-- PROJECT 2: CONVERT-EM -->
-      <article class="ch-card project-card">
+      <article class="ch-card project-card bdsn-reveal">
         <div>
           <div class="project-top-meta">
             <span>2020 — PRESENT · MULTI-TENANT AI SAAS</span>
@@ -225,7 +253,7 @@
       </article>
 
       <!-- PROJECT 3: MS SPORTS ACADEMY -->
-      <article class="ch-card project-card">
+      <article class="ch-card project-card bdsn-reveal">
         <div>
           <div class="project-top-meta">
             <span>2025 · MAY — NOV · SPORTS OPERATIONS</span>
@@ -258,7 +286,7 @@
       </article>
 
       <!-- PROJECT 4: ARABIA HOLDING -->
-      <article class="ch-card project-card">
+      <article class="ch-card project-card bdsn-reveal">
         <div>
           <div class="project-top-meta">
             <span>2020 — 2024 · REAL ESTATE ENTERPRISE</span>
@@ -293,7 +321,7 @@
     </section>
 
     <!-- SECTION HEADER: THE CAREER -->
-    <div class="ch-card section-header-card" data-category="career">
+    <div class="ch-card section-header-card bdsn-reveal" data-category="career">
       <h2 class="section-title">The Career</h2>
       <span class="section-counter">04 POSITIONS · CHRONOLOGICAL</span>
     </div>
@@ -302,7 +330,7 @@
     <section class="experience-list" id="experience" data-category="career">
 
       <!-- EXP 1 -->
-      <div class="ch-card exp-card">
+      <div class="ch-card exp-card bdsn-reveal">
         <div class="exp-sidebar">
           <div class="exp-date-label">2026 — Present</div>
           <div class="exp-badge-type">Personal Project</div>
@@ -332,7 +360,7 @@
       </div>
 
       <!-- EXP 2 -->
-      <div class="ch-card exp-card">
+      <div class="ch-card exp-card bdsn-reveal">
         <div class="exp-sidebar">
           <div class="exp-date-label">2025 · May – Nov</div>
           <div class="exp-badge-type">Freelance</div>
@@ -361,7 +389,7 @@
       </div>
 
       <!-- EXP 3 -->
-      <div class="ch-card exp-card">
+      <div class="ch-card exp-card bdsn-reveal">
         <div class="exp-sidebar">
           <div class="exp-date-label">2020 — Present</div>
           <div class="exp-badge-type">Full-time</div>
@@ -393,7 +421,7 @@
       </div>
 
       <!-- EXP 4 -->
-      <div class="ch-card exp-card">
+      <div class="ch-card exp-card bdsn-reveal">
         <div class="exp-sidebar">
           <div class="exp-date-label">2019 — 2022</div>
           <div class="exp-badge-type">Full-time</div>
@@ -423,7 +451,7 @@
     </section>
 
     <!-- SECTION HEADER: THE STACK -->
-    <div class="ch-card section-header-card" data-category="stack">
+    <div class="ch-card section-header-card bdsn-reveal" data-category="stack">
       <h2 class="section-title">The Stack</h2>
       <span class="section-counter">08 CATEGORIES · ARCHITECTURE &amp; TOOLS</span>
     </div>
@@ -431,7 +459,7 @@
     <!-- THE STACK (Skills Matrix Modular Grid) -->
     <section class="skills-grid-modular" id="skills" data-category="stack">
 
-      <div class="ch-card skill-category-card">
+      <div class="ch-card skill-category-card bdsn-reveal">
         <div>
           <div class="skill-cat-header">
             <span>01</span>
@@ -448,7 +476,7 @@
         </div>
       </div>
 
-      <div class="ch-card skill-category-card">
+      <div class="ch-card skill-category-card bdsn-reveal">
         <div>
           <div class="skill-cat-header">
             <span>02</span>
@@ -464,7 +492,7 @@
         </div>
       </div>
 
-      <div class="ch-card skill-category-card">
+      <div class="ch-card skill-category-card bdsn-reveal">
         <div>
           <div class="skill-cat-header">
             <span>03</span>
@@ -482,7 +510,7 @@
         </div>
       </div>
 
-      <div class="ch-card skill-category-card">
+      <div class="ch-card skill-category-card bdsn-reveal">
         <div>
           <div class="skill-cat-header">
             <span>04</span>
@@ -499,7 +527,7 @@
         </div>
       </div>
 
-      <div class="ch-card skill-category-card">
+      <div class="ch-card skill-category-card bdsn-reveal">
         <div>
           <div class="skill-cat-header">
             <span>05</span>
@@ -516,7 +544,7 @@
         </div>
       </div>
 
-      <div class="ch-card skill-category-card">
+      <div class="ch-card skill-category-card bdsn-reveal">
         <div>
           <div class="skill-cat-header">
             <span>06</span>
@@ -534,7 +562,7 @@
         </div>
       </div>
 
-      <div class="ch-card skill-category-card">
+      <div class="ch-card skill-category-card bdsn-reveal">
         <div>
           <div class="skill-cat-header">
             <span>07</span>
@@ -552,7 +580,7 @@
         </div>
       </div>
 
-      <div class="ch-card skill-category-card">
+      <div class="ch-card skill-category-card bdsn-reveal">
         <div>
           <div class="skill-cat-header">
             <span>08</span>
@@ -573,7 +601,7 @@
     </section>
 
     <!-- SECTION HEADER: CREDENTIALS -->
-    <div class="ch-card section-header-card" data-category="credentials">
+    <div class="ch-card section-header-card bdsn-reveal" data-category="credentials">
       <h2 class="section-title">Credentials &amp; Education</h2>
       <span class="section-counter">05 CERTIFICATIONS · ACADEMICS</span>
     </div>
@@ -581,7 +609,7 @@
     <!-- CREDENTIALS (Certifications Grid) -->
     <section class="credentials-grid" id="certifications" data-category="credentials">
 
-      <div class="ch-card cert-card">
+      <div class="ch-card cert-card bdsn-reveal">
         <div class="cert-avatar-icon">🎓</div>
         <div class="cert-details">
           <div class="cert-title-txt">ALX AiCE — AI Career Essentials</div>
@@ -590,7 +618,7 @@
         </div>
       </div>
 
-      <div class="ch-card cert-card">
+      <div class="ch-card cert-card bdsn-reveal">
         <div class="cert-avatar-icon">☕</div>
         <div class="cert-details">
           <div class="cert-title-txt">Spring Boot 3 Essential Training</div>
@@ -599,7 +627,7 @@
         </div>
       </div>
 
-      <div class="ch-card cert-card">
+      <div class="ch-card cert-card bdsn-reveal">
         <div class="cert-avatar-icon">🎓</div>
         <div class="cert-details">
           <div class="cert-title-txt">CS50's Introduction to Computer Science</div>
@@ -608,7 +636,7 @@
         </div>
       </div>
 
-      <div class="ch-card cert-card">
+      <div class="ch-card cert-card bdsn-reveal">
         <div class="cert-avatar-icon">🐍</div>
         <div class="cert-details">
           <div class="cert-title-txt">Crash Course on Python</div>
@@ -617,8 +645,8 @@
         </div>
       </div>
 
-      <!-- Education Card (Spans across or neatly integrated) -->
-      <div class="ch-card cert-card" style="grid-column: 1 / -1;">
+      <!-- Education Card (Spans across) -->
+      <div class="ch-card cert-card bdsn-reveal" style="grid-column: 1 / -1;">
         <div class="cert-avatar-icon">🏛</div>
         <div class="cert-details">
           <div class="cert-title-txt">Bachelor of Management Information Systems (MIS)</div>
@@ -630,9 +658,9 @@
     </section>
 
     <!-- SIGNATURE CARL HAUSER FOOTER CARD -->
-    <footer class="ch-card footer-card" id="contact">
+    <footer class="ch-card footer-card bdsn-reveal" id="contact">
       <div class="footer-top-section">
-        <h2 class="footer-farewell-heading" id="farewellHeading" title="Click to react!">
+        <h2 class="footer-farewell-heading magnetic-elem" id="farewellHeading" title="Click to react!">
           Ohhh that's all <span class="footer-emoji">🥺</span>
         </h2>
 
@@ -642,7 +670,7 @@
           </p>
 
           <div class="footer-contact-actions">
-            <a href="mailto:bishoysouser@gmail.com" class="footer-email-btn">
+            <a href="mailto:bishoysouser@gmail.com" class="footer-email-btn magnetic-elem">
               <span>Say Hello</span>
               <span>↗</span>
             </a>
@@ -653,24 +681,24 @@
       <!-- Footer Quick Nav (2 columns with + icons) -->
       <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; align-items:center;">
         <div class="ch-nav-menu">
-          <a href="#about" class="ch-nav-link">
+          <a href="#about" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Process
           </a>
-          <a href="#projects" class="ch-nav-link">
+          <a href="#projects" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Systems
           </a>
-          <a href="#experience" class="ch-nav-link">
+          <a href="#experience" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Career
           </a>
-          <a href="#skills" class="ch-nav-link">
+          <a href="#skills" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Stack
           </a>
         </div>
 
         <div class="ch-socials-col" style="flex-direction:row; align-items:center; gap:20px;">
-          <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" class="ch-ext-link">GitHub</a>
-          <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" class="ch-ext-link">LinkedIn</a>
-          <a href="mailto:bishoysouser@gmail.com" class="ch-ext-link">Email</a>
+          <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" class="ch-ext-link magnetic-elem">GitHub</a>
+          <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" class="ch-ext-link magnetic-elem">LinkedIn</a>
+          <a href="mailto:bishoysouser@gmail.com" class="ch-ext-link magnetic-elem">Email</a>
         </div>
       </div>
 
@@ -682,6 +710,12 @@
     </footer>
 
   </div>
+
+  <!-- FLOATING AVAILABILITY CAPSULE BADGE (BDSN Honors / Status Pill) -->
+  <a href="#contact" class="floating-status-pill magnetic-elem" title="Available for opportunities">
+    <span class="status-beacon-dot"></span>
+    <span>Available for Backend Roles</span>
+  </a>
 
   <!-- LIGHTBOX MODAL FOR BLUEPRINT SCHEMATICS -->
   <div class="lightbox-modal" id="schematicLightbox" role="dialog" aria-modal="true">
@@ -695,7 +729,9 @@
     </div>
   </div>
 
-  <script src="js/script.js?v=2"></script>
+  <!-- Scripts: Lenis Smooth Scroll Engine + BDSN Animation Engine -->
+  <script src="js/lenis.min.js"></script>
+  <script src="js/script.js?v=3"></script>
 </body>
 
 </html>

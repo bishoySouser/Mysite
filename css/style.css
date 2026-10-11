@@ -1088,3 +1088,193 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
+/* ==========================================================================
+   BDSN CLUB (bdsn.club) ANIMATION SYSTEM
+   Inertia scroll, staggered reveals, 3D tilt, kinetic ticker, & magnetic hover
+   ========================================================================== */
+
+/* --- Lenis Smooth Scroll Setup --- */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* --- Staggered Scroll Reveal (bdsn.club style) --- */
+.bdsn-reveal {
+  opacity: 0;
+  transform: translateY(32px) scale(0.985);
+  filter: blur(2px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.bdsn-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Stagger delay utility classes */
+.bdsn-delay-1 { transition-delay: 0.08s; }
+.bdsn-delay-2 { transition-delay: 0.16s; }
+.bdsn-delay-3 { transition-delay: 0.24s; }
+.bdsn-delay-4 { transition-delay: 0.32s; }
+
+/* --- 3D Magnetic Card Tilt (bdsn.club Interactive Card Physics) --- */
+.ch-card, .project-card, .about-photo-wrap {
+  transform-style: preserve-3d;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease;
+  will-change: transform;
+}
+
+.project-card:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.07);
+}
+
+.project-preview-wrap img {
+  transform-origin: center center;
+}
+
+.project-card:hover .project-preview-wrap img {
+  transform: scale(1.035);
+}
+
+/* --- Kinetic Marquee Ticker Strip (bdsn.club studio signature) --- */
+.marquee-strip-card {
+  padding: 16px 0;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-card);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 26s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-right: 32px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.marquee-content span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s ease;
+}
+
+.marquee-content span:hover {
+  color: #000000;
+}
+
+.marquee-accent {
+  color: var(--accent-yellow-dark);
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- Floating Availability Capsule Badge (bdsn.club Honors / Status Pill) --- */
+.floating-status-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  background: rgba(244, 244, 244, 0.94);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.floating-status-pill:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14);
+}
+
+.status-beacon-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.status-beacon-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid #22c55e;
+  animation: beaconPulse 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes beaconPulse {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* --- Magnetic Pull Effect on Buttons & Badges --- */
+.magnetic-elem {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* --- Stats Count-Up Transition --- */
+.stat-num {
+  transition: color 0.3s ease;
+}
+
+.stat-box:hover .stat-num {
+  color: #000000;
+}
+
