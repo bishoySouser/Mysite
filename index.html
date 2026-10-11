@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bishoy Souser — Senior AI Engineer | Backend &amp; GenAI Solutions</title>
   <meta name="description"
-    content="Senior AI Engineer & Backend Solutions Architect with 5+ years of experience specializing in Python, Java, and Generative AI (LLMs, RAG, Prompt Engineering, LangChain, Spring Boot, Laravel)." />
+    content="Senior AI Engineer &amp; Backend Solutions Architect specializing in Python, Java, and Generative AI (LLMs, RAG, Prompt Engineering, LangChain, Spring Boot, Laravel)." />
   <link rel="icon" type="image/png" href="imgs/icon-title.png" />
 
   <!-- Fonts & Stylesheet -->
@@ -15,17 +15,20 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
 </head>
 
 <body>
 
+  <!-- Ambient Cosmic Stardust Particle Canvas (Dave Holloway UK) -->
+  <canvas id="goldSnowCanvas"></canvas>
+
   <div class="site-wrapper">
 
-    <!-- HERO CARD (Carl Hauser Layout + BDSN Physics) -->
+    <!-- HERO CARD (Carl Hauser Layout + Dave Holloway Motion) -->
     <header class="ch-card hero-card bdsn-reveal" id="top">
       <div class="hero-top-row">
-        <!-- Left: Hello Greeting -->
+        <!-- Left: Hello Greeting with Interactive Emojis -->
         <div>
           <h1 class="hero-hello magnetic-elem" id="heroHello" title="Click to wave!">
             Hello <span class="wave-hand">👋</span>
@@ -33,7 +36,7 @@
           <p class="hero-subhead">Bishoy Souser · Senior AI Engineer | Backend &amp; GenAI Solutions</p>
         </div>
 
-        <!-- Center: 2-Column Nav with Circle Plus Icons -->
+        <!-- Center: 2-Column Nav with Circle Plus Icons & Rolling Text -->
         <nav class="ch-nav-menu" aria-label="Main Navigation">
           <a href="#about" class="ch-nav-link magnetic-elem">
             <span class="plus-icon">+</span> The Process
@@ -55,7 +58,7 @@
           </a>
         </nav>
 
-        <!-- Right: Social Links -->
+        <!-- Right: Social Links with Rolling Text -->
         <div class="ch-socials-col">
           <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" class="ch-ext-link magnetic-elem">GitHub</a>
           <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" class="ch-ext-link magnetic-elem">LinkedIn</a>
@@ -172,19 +175,29 @@
       </div>
     </section>
 
-    <!-- SECTION HEADER: THE SYSTEMS -->
+    <!-- SECTION HEADER: THE SYSTEMS WITH DAVE HOLLOWAY STEPPER CONTROLS -->
     <div class="ch-card section-header-card bdsn-reveal" data-category="systems">
-      <h2 class="section-title">
-        The Systems <span class="ch-badge-yellow">Related Projects</span>
-      </h2>
-      <span class="section-counter">06 SCHEMATICS · AI &amp; BACKEND ARCHITECTURE</span>
+      <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+        <h2 class="section-title">
+          The Systems <span class="ch-badge-yellow">Related Projects</span>
+        </h2>
+        <span class="section-counter">06 SCHEMATICS · AI &amp; BACKEND</span>
+      </div>
+
+      <!-- Dave Holloway Project Stepper Controls (1 / 06) -->
+      <div class="dh-stepper-controls">
+        <button id="stepperPrev" class="dh-stepper-btn" aria-label="Previous Project">←</button>
+        <span id="stepperCounter">01 / 06</span>
+        <button id="stepperNext" class="dh-stepper-btn" aria-label="Next Project">→</button>
+      </div>
     </div>
 
-    <!-- THE SYSTEMS (Featured Projects Grid with 3D Tilt & Schematics) -->
-    <section class="projects-grid" id="projects" data-category="systems">
+    <!-- THE SYSTEMS (Featured Projects Grid with Dave Holloway Hanging Tabs & 3D Tilt) -->
+    <section class="projects-grid dh-rail-wrapper" id="projects" data-category="systems">
 
       <!-- PROJECT 1: AI BANKING COPILOT (NEW FROM RESUME) -->
       <article class="ch-card project-card bdsn-reveal">
+        <div class="dh-hanging-tab tab-coral">AI · RAG</div>
         <div>
           <div class="project-top-meta">
             <span>GENAI &amp; RAG · PYTHON / FASTAPI</span>
@@ -202,7 +215,7 @@
 
           <a href="#projects" class="project-title-link">
             AI-Powered Banking Assistant &amp; Financial Copilot
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </a>
 
           <p class="project-desc">
@@ -223,6 +236,7 @@
 
       <!-- PROJECT 2: ENTERPRISE SOCIAL INTELLIGENCE (NEW FROM RESUME) -->
       <article class="ch-card project-card bdsn-reveal">
+        <div class="dh-hanging-tab tab-purple">AI · SCRAPING</div>
         <div>
           <div class="project-top-meta">
             <span>AI SCRAPING &amp; INTELLIGENCE · LARAVEL / LLMS</span>
@@ -240,7 +254,7 @@
 
           <a href="#projects" class="project-title-link">
             Enterprise Social Media &amp; Competitor Intelligence Platform
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </a>
 
           <p class="project-desc">
@@ -261,6 +275,7 @@
 
       <!-- PROJECT 3: CONVERT-EM.COM (UPDATED FROM RESUME) -->
       <article class="ch-card project-card bdsn-reveal">
+        <div class="dh-hanging-tab tab-yellow">SAAS · AGENTS</div>
         <div>
           <div class="project-top-meta">
             <span>MULTI-TENANT AI SAAS · CONVERSATIONAL AGENTS</span>
@@ -275,7 +290,7 @@
 
           <a href="https://convert-em.com" target="_blank" rel="noopener" class="project-title-link">
             Convert-EM.com
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </a>
 
           <p class="project-desc">
@@ -295,6 +310,7 @@
 
       <!-- PROJECT 4: VENTORY (SPRING BOOT) -->
       <article class="ch-card project-card bdsn-reveal">
+        <div class="dh-hanging-tab tab-blue">JAVA · SPRING</div>
         <div>
           <div class="project-top-meta">
             <span>2026 — PRESENT · JAVA / SPRING BOOT</span>
@@ -309,7 +325,7 @@
 
           <a href="#projects" class="project-title-link">
             Ventory — Inventory Management System
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </a>
 
           <p class="project-desc">
@@ -329,6 +345,7 @@
 
       <!-- PROJECT 5: MS SPORTS ACADEMY (FROM RESUME) -->
       <article class="ch-card project-card bdsn-reveal">
+        <div class="dh-hanging-tab tab-emerald">OPERATIONS · CRON</div>
         <div>
           <div class="project-top-meta">
             <span>05/2025 – 11/2025 · SPORTS OPERATIONS PLATFORM</span>
@@ -343,7 +360,7 @@
 
           <a href="https://ms-sportsacademy.com" target="_blank" rel="noopener" class="project-title-link">
             MS Sports Academy
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </a>
 
           <p class="project-desc">
@@ -363,6 +380,7 @@
 
       <!-- PROJECT 6: ARABIA HOLDING (FROM RESUME) -->
       <article class="ch-card project-card bdsn-reveal">
+        <div class="dh-hanging-tab tab-coral">ENTERPRISE · REDIS</div>
         <div>
           <div class="project-top-meta">
             <span>ENTERPRISE PORTAL · REDIS CACHING &amp; CRM</span>
@@ -377,7 +395,7 @@
 
           <a href="https://arabia-holding.com" target="_blank" rel="noopener" class="project-title-link">
             Arabia-Holding.com
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </a>
 
           <p class="project-desc">
@@ -415,7 +433,7 @@
         <div class="exp-main-body">
           <h3 class="exp-role-title">
             Senior Backend Developer · Vhorus
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </h3>
           <div class="exp-company-sub">Multi-Tenant SaaS &amp; AI Integration Engineering</div>
           <ul class="exp-bullet-list">
@@ -446,7 +464,7 @@
         <div class="exp-main-body">
           <h3 class="exp-role-title">
             <a href="https://ms-sportsacademy.com" target="_blank" rel="noopener">Backend Developer · Rollinreal</a>
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </h3>
           <div class="exp-company-sub">MS Sports Academy Operational Management Platform</div>
           <ul class="exp-bullet-list">
@@ -475,7 +493,7 @@
         <div class="exp-main-body">
           <h3 class="exp-role-title">
             Full Stack Developer · ThinkNavy
-            <span class="arrow-icon">↗</span>
+            <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
           </h3>
           <div class="exp-company-sub">PHP &amp; Laravel Ecosystem Solutions</div>
           <ul class="exp-bullet-list">
@@ -670,7 +688,7 @@
           <div class="footer-contact-actions">
             <a href="mailto:bishoysouser@gmail.com" class="footer-email-btn magnetic-elem">
               <span>Say Hello</span>
-              <span>↗</span>
+              <span class="dh-arrow-box"><span class="dh-arrow-track"><span>↗</span><span>↗</span></span></span>
             </a>
           </div>
         </div>
@@ -709,6 +727,16 @@
 
   </div>
 
+  <!-- DAVE HOLLOWAY STUDIO GOLD MODE PILL SWITCH -->
+  <div class="dh-gold-toggle-wrapper">
+    <button type="button" class="dh-gold-btn magnetic-elem" id="goldModeBtn" aria-label="Toggle studio gold mode">
+      <span class="gold-btn-label">STUDIO GOLD</span>
+      <span class="gold-switch-track">
+        <span class="gold-switch-knob"></span>
+      </span>
+    </button>
+  </div>
+
   <!-- FLOATING AVAILABILITY CAPSULE BADGE (BDSN Honors / Status Pill) -->
   <a href="#contact" class="floating-status-pill magnetic-elem" title="Available for opportunities">
     <span class="status-beacon-dot"></span>
@@ -727,9 +755,9 @@
     </div>
   </div>
 
-  <!-- Scripts: Lenis Smooth Scroll Engine + BDSN Animation Engine -->
+  <!-- Scripts: Lenis Smooth Scroll Engine + BDSN & Dave Holloway Animation Engine -->
   <script src="js/lenis.min.js"></script>
-  <script src="js/script.js?v=4"></script>
+  <script src="js/script.js?v=5"></script>
 </body>
 
 </html>
