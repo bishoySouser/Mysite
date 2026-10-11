@@ -3,458 +3,699 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bishoy Souser — Senior Backend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bishoy Souser — theprocess (Senior Backend Developer)</title>
+  <meta name="description"
+    content="This is the backend process. Scalable microservices, clean domain architectures, and high-throughput systems built with Java, Spring Boot & Laravel by Bishoy Souser." />
+  <link rel="icon" type="image/png" href="imgs/icon-title.png" />
+
+  <!-- Fonts & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
 </head>
 
 <body>
 
-  <div class="spotlight" id="spotlight"></div>
+  <div class="site-wrapper">
 
-  <div class="layout">
-
-    <!-- LEFT PANEL -->
-    <aside class="left">
-      <div>
-        <div class="profile-wrapper">
-          <img src="imgs/profile.png" alt="Bishoy Souser" class="profile-img" />
+    <!-- HERO CARD (Carl Hauser Signature Layout) -->
+    <header class="ch-card hero-card" id="top">
+      <div class="hero-top-row">
+        <!-- Left: Hello Greeting -->
+        <div>
+          <h1 class="hero-hello" id="heroHello" title="Click to wave!">
+            Hello <span class="wave-hand">👋</span>
+          </h1>
+          <p class="hero-subhead">Bishoy Souser · Senior Backend Developer</p>
         </div>
-        <h1 class="name">Bishoy Souser</h1>
-        <p class="title">Senior Backend Developer</p>
-        <p class="bio">I build scalable, clean-architecture systems that drive real business outcomes — from
-          multi-tenant SaaS to AI-integrated platforms.</p>
 
-        <nav>
-          <a class="nav-item active" data-section="about" href="#about">
-            <span class="nav-line"></span>About
+        <!-- Center: 2-Column Nav with Circle Plus Icons -->
+        <nav class="ch-nav-menu" aria-label="Main Navigation">
+          <a href="#about" class="ch-nav-link">
+            <span class="plus-icon">+</span> The Process
           </a>
-          <a class="nav-item" data-section="experience" href="#experience">
-            <span class="nav-line"></span>Experience
+          <a href="#experience" class="ch-nav-link">
+            <span class="plus-icon">+</span> The Career
           </a>
-          <a class="nav-item" data-section="projects" href="#projects">
-            <span class="nav-line"></span>Projects
+          <a href="#projects" class="ch-nav-link">
+            <span class="plus-icon">+</span> The Systems
           </a>
-          <a class="nav-item" data-section="skills" href="#skills">
-            <span class="nav-line"></span>Skills
+          <a href="#skills" class="ch-nav-link">
+            <span class="plus-icon">+</span> The Stack
           </a>
-          <a class="nav-item" data-section="certifications" href="#certifications">
-            <span class="nav-line"></span>Certifications
+          <a href="#certifications" class="ch-nav-link">
+            <span class="plus-icon">+</span> Credentials
+          </a>
+          <a href="#contact" class="ch-nav-link">
+            <span class="plus-icon">+</span> Contact
           </a>
         </nav>
 
-        <div class="socials">
-          <!-- GitHub -->
-          <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-            </svg>
-          </a>
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-          </a>
-          <!-- Email -->
-          <a href="mailto:bishoysouser@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
-            </svg>
-          </a>
+        <!-- Right: Social Links -->
+        <div class="ch-socials-col">
+          <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" class="ch-ext-link">GitHub</a>
+          <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" class="ch-ext-link">LinkedIn</a>
+          <a href="mailto:bishoysouser@gmail.com" class="ch-ext-link">Email</a>
+          <a href="tel:+201220212168" class="ch-ext-link">+20 122 021 2168</a>
         </div>
       </div>
 
-      <div class="footer">
-        Coded with care in Cairo, Egypt.<br>
-        <a href="mailto:bishoysouser@gmail.com">bishoysouser@gmail.com</a> ·
-        <a href="tel:+201220212168">+20 122 021 2168</a>
+      <!-- Bottom: Large Statement & Cairo Live Clock -->
+      <div class="hero-bottom-row">
+        <p class="hero-statement">
+          This is the backend process. Scalable microservices, clean domain architectures, and high-throughput systems built with Java, Spring Boot & Laravel.
+        </p>
+
+        <div class="hero-live-clock" title="Cairo Live Time">
+          <span class="live-dot"></span>
+          <span id="liveClock">Cairo EET --:--:--</span>
+        </div>
       </div>
-    </aside>
+    </header>
 
-    <!-- RIGHT PANEL -->
-    <main class="right">
+    <!-- SECTION FILTER BAR (Carl Hauser Gallery Filter Switcher) -->
+    <div class="ch-card filter-strip-card">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="process">The Process</button>
+      <button class="filter-pill" data-filter="systems">The Systems</button>
+      <button class="filter-pill" data-filter="career">The Career</button>
+      <button class="filter-pill" data-filter="stack">The Stack</button>
+      <button class="filter-pill" data-filter="credentials">Credentials</button>
+    </div>
 
-      <!-- ABOUT -->
-      <section id="about">
-        <div class="section-label">About</div>
-        <div class="about">
-          <p>I'm a backend developer with <strong>5+ years of experience</strong> building scalable web applications. 
-            With a strong foundation in <strong>PHP and Laravel</strong>, I am currently expanding my expertise into <strong>Java</strong> 
-            and <strong>Spring Boot</strong>. I am diving deep into core Java concepts, such as understanding the <strong>object lifecycle</strong>, while applying this knowledge hands-on.</p>
-          <p>My work spans digital transformation, multi-tenant architecture, and AI-integrated platforms. At
-            <strong>Vhorus</strong>, I architected <a href="https://convert-em.com" target="_blank"
-              rel="noopener">Convert-EM</a> — a multi-tenant lead conversion platform that delivered 8,600+ qualified
-            leads for an automotive client and hit 100% admission targets for a university client, powered by Botpress
-            AI agents across WhatsApp, Instagram, and Web.
+    <!-- THE PROCESS (About & Stats) -->
+    <section class="ch-card" id="about" data-category="process">
+      <div class="about-grid">
+        <!-- Portrait Frame -->
+        <div class="about-photo-wrap">
+          <img src="imgs/profile.png" alt="Bishoy Souser" />
+          <div class="about-meta-tag">Bishoy · Cairo, EG</div>
+        </div>
+
+        <!-- Story & Philosophy -->
+        <div class="about-content">
+          <div class="card-label-top">
+            <span>ABOUT · OVERVIEW</span>
+            <span>ID 000</span>
+          </div>
+
+          <h2 class="about-heading">
+            Engineering robust architectures that scale with purpose.
+          </h2>
+
+          <div class="about-text">
+            <p>
+              I'm a backend engineer with <strong>5+ years of experience</strong> architecting resilient web applications. With a seasoned foundation in <strong>PHP and Laravel</strong>, I am actively expanding into <strong>Java and Spring Boot</strong>, mastering core Java principles, the <strong>object lifecycle</strong>, and high-concurrency patterns.
+            </p>
+            <p>
+              At <strong>Vhorus</strong>, I architected <a href="https://convert-em.com" target="_blank" rel="noopener" style="text-decoration: underline; font-weight:600;">Convert-EM</a> — a multi-tenant lead conversion platform that delivered 8,600+ qualified leads and achieved 100% university admission targets, powered by Botpress AI agents across WhatsApp, Instagram, and Web.
+            </p>
+            <p>
+              I care deeply about <strong>clean architecture</strong> — SOLID principles, domain-driven design, and structured layering. Currently building <strong>Ventory</strong>, a complete inventory management system built from scratch in Java Spring Boot.
+            </p>
+          </div>
+
+          <!-- Highlight Metric Boxes -->
+          <div class="about-stats-row">
+            <div class="stat-box">
+              <div class="stat-num">5+</div>
+              <div class="stat-desc">Years Backend Experience</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">8.6k+</div>
+              <div class="stat-desc">Qualified Leads (Convert-EM)</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">5</div>
+              <div class="stat-desc">Branches Scaled (MS Sports)</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">100%</div>
+              <div class="stat-desc">Target Admissions Delivered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION HEADER: THE SYSTEMS -->
+    <div class="ch-card section-header-card" data-category="systems">
+      <h2 class="section-title">
+        The Systems <span class="ch-badge-yellow">Active Works</span>
+      </h2>
+      <span class="section-counter">04 SCHEMATICS · ARCHITECTURE</span>
+    </div>
+
+    <!-- THE SYSTEMS (Featured Projects Grid with Carl Hauser Schematics) -->
+    <section class="projects-grid" id="projects" data-category="systems">
+
+      <!-- PROJECT 1: VENTORY -->
+      <article class="ch-card project-card">
+        <div>
+          <div class="project-top-meta">
+            <span>2026 — PRESENT · JAVA / SPRING BOOT</span>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="ch-badge-yellow">new</span>
+              <span>ID 001</span>
+            </div>
+          </div>
+
+          <!-- Architectural Schematic Preview (Click to Zoom) -->
+          <div class="project-preview-wrap" data-title="Ventory — Spring Boot Layered Architecture Blueprint" data-id="ID 001">
+            <img src="imgs/schematic-ventory.jpg" alt="Ventory Architecture Blueprint" loading="lazy" />
+            <span class="project-zoom-badge">🔍 View Blueprint</span>
+          </div>
+
+          <a href="#projects" class="project-title-link">
+            Ventory — Inventory Management System
+            <span class="arrow-icon">↗</span>
+          </a>
+
+          <p class="project-desc">
+            Production-grade layered architecture in Java Spring Boot. Implements Controllers, Services, Repositories, DTOs, Mappers, and Custom Global Exception Handling. Entities include Products, Categories, Suppliers, and Stock Movements with enum-based movement types, JWT security, and real-time tracking.
           </p>
-          <p>I care about <strong>clean architecture</strong> — SOLID principles, design patterns, well-structured
-            layering — and about systems that are fast, maintainable, and built to last. I am currently learning Spring Boot in depth by building <strong>Ventory</strong>, a full inventory management system from scratch.</p>
-          <p>Outside of code, I'm based in <strong>Cairo, Egypt</strong></p>
-        </div>
-      </section>
-
-      <!-- EXPERIENCE -->
-      <section id="experience">
-        <div class="section-label">Experience</div>
-
-        <div class="exp-item">
-          <div class="exp-date">2026 —<br>Present</div>
-          <div>
-            <div class="exp-role">
-              Backend Developer (Java) · Personal Project
-              <span class="arrow">↗</span>
-            </div>
-            <div class="exp-company">Ventory — Inventory Management System</div>
-            <ul class="exp-desc">
-              <li>Building Ventory in Java Spring Boot to apply real-world backend architecture patterns.</li>
-              <li>Implemented layered architecture: Controllers, Services, Repositories, DTOs, Mappers, and custom
-                Global Exception Handling.</li>
-              <li>Entities include Products, Categories, Suppliers, and Stock Movements with enum-based movement types.
-              </li>
-              <li>Features: CRUD, real-time stock tracking, role-based access control (Admin/Manager/Staff), JWT auth.
-              </li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Java</span>
-              <span class="tag">Spring Boot</span>
-              <span class="tag">Spring Data JPA</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">JWT</span>
-              <span class="tag">Maven</span>
-            </div>
-          </div>
         </div>
 
-        <div class="exp-item">
-          <div class="exp-date">2025<br>May–Nov</div>
-          <div>
-            <div class="exp-role">
-              <a href="https://ms-sportsacademy.com" target="_blank" rel="noopener">Backend Developer · Rollinreal</a>
-              <span class="arrow">↗</span>
-            </div>
-            <div class="exp-company">Freelance</div>
-            <ul class="exp-desc">
-              <li>Built a full operational management system for MS Sports Academy — 5 branches, 600+ athletes.</li>
-              <li>Developed a session booking system with capacity management, confirmations, and automated reminders.
-              </li>
-              <li>Implemented packages &amp; subscriptions management with usage tracking and renewals.</li>
-              <li>Automated commission-based trainer salary calculations and weekly branch reports via Cron Jobs.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Laravel</span>
-              <span class="tag">PHP</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Cron Jobs</span>
-              <span class="tag">RESTful APIs</span>
-            </div>
+        <div class="tag-pills">
+          <span class="tag-pill">Java</span>
+          <span class="tag-pill">Spring Boot</span>
+          <span class="tag-pill">Spring Data JPA</span>
+          <span class="tag-pill">MySQL</span>
+          <span class="tag-pill">JWT</span>
+          <span class="tag-pill">Maven</span>
+        </div>
+      </article>
+
+      <!-- PROJECT 2: CONVERT-EM -->
+      <article class="ch-card project-card">
+        <div>
+          <div class="project-top-meta">
+            <span>2020 — PRESENT · MULTI-TENANT AI SAAS</span>
+            <span>ID 002</span>
           </div>
+
+          <!-- Architectural Schematic Preview (Click to Zoom) -->
+          <div class="project-preview-wrap" data-title="Convert-EM — Multi-Tenant AI Lead Qualification Schematic" data-id="ID 002">
+            <img src="imgs/schematic-convertem.jpg" alt="Convert-EM Architecture Blueprint" loading="lazy" />
+            <span class="project-zoom-badge">🔍 View Blueprint</span>
+          </div>
+
+          <a href="https://convert-em.com" target="_blank" rel="noopener" class="project-title-link">
+            Convert-EM.com
+            <span class="arrow-icon">↗</span>
+          </a>
+
+          <p class="project-desc">
+            Multi-tenant lead conversion platform powered by Botpress AI agents across WhatsApp, Instagram, and Web. Delivered 8,600+ qualified leads for automotive clients and 100% admission targets for a university client. Features centralized CRM, real-time intelligence, and automated reactivation.
+          </p>
         </div>
 
-        <div class="exp-item">
-          <div class="exp-date">2020 —<br>Present</div>
-          <div>
-            <div class="exp-role">
-              Senior Backend Developer · Vhorus
-              <span class="arrow">↗</span>
-            </div>
-            <div class="exp-company">Full-time</div>
-            <ul class="exp-desc">
-              <li>Architected Convert-EM, a multi-tenant lead conversion platform delivering 8,600+ qualified leads for
-                an automotive client and 100% admission target for a university client.</li>
-              <li>Integrated Botpress AI agents for automated lead qualification across WhatsApp, Instagram, and Web.
-              </li>
-              <li>Resolved 50+ critical SEO issues via Google Search Console — increased organic traffic 25%, reduced
-                duplicate pages 40%.</li>
-              <li>Developed Arabia-Holding.com real estate portal with custom CRM, SEO tooling, and Redis caching.</li>
-              <li>Managed complex multi-tenant architectures and optimized high-traffic APIs using advanced caching and
-                query optimization.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Laravel</span>
-              <span class="tag">Filament</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Redis</span>
-              <span class="tag">Docker</span>
-              <span class="tag">GitHub Actions</span>
-              <span class="tag">REST APIs</span>
-            </div>
+        <div class="tag-pills">
+          <span class="tag-pill">Laravel</span>
+          <span class="tag-pill">Filament</span>
+          <span class="tag-pill">Botpress AI</span>
+          <span class="tag-pill">Multi-tenancy</span>
+          <span class="tag-pill">MySQL</span>
+          <span class="tag-pill">REST APIs</span>
+        </div>
+      </article>
+
+      <!-- PROJECT 3: MS SPORTS ACADEMY -->
+      <article class="ch-card project-card">
+        <div>
+          <div class="project-top-meta">
+            <span>2025 · MAY — NOV · SPORTS OPERATIONS</span>
+            <span>ID 003</span>
           </div>
+
+          <!-- Architectural Schematic Preview (Click to Zoom) -->
+          <div class="project-preview-wrap" data-title="MS Sports Academy — Booking Engine & Cron Salary Scheduler" data-id="ID 003">
+            <img src="imgs/schematic-sports.jpg" alt="MS Sports Academy Architecture Blueprint" loading="lazy" />
+            <span class="project-zoom-badge">🔍 View Blueprint</span>
+          </div>
+
+          <a href="https://ms-sportsacademy.com" target="_blank" rel="noopener" class="project-title-link">
+            MS Sports Academy
+            <span class="arrow-icon">↗</span>
+          </a>
+
+          <p class="project-desc">
+            Full operational management system serving 5 branches and 600+ athletes. Covers session booking with capacity management, confirmation pipelines, package subscriptions with usage tracking, and automated commission-based trainer salary calculation via scheduled Cron Jobs.
+          </p>
         </div>
 
-        <div class="exp-item">
-          <div class="exp-date">2019 —<br>2022</div>
-          <div>
-            <div class="exp-role">
-              Full Stack Developer · ThinkNavy
-              <span class="arrow">↗</span>
-            </div>
-            <div class="exp-company">Full-time</div>
-            <ul class="exp-desc">
-              <li>Led end-to-end web development projects within the PHP / Laravel ecosystem.</li>
-              <li>Managed SQL database structures for efficient data retrieval and storage across multiple client
-                projects.</li>
-              <li>Collaborated with cross-functional teams to meet technical and business objectives on time.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Laravel</span>
-              <span class="tag">PHP</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">REST APIs</span>
-            </div>
-          </div>
+        <div class="tag-pills">
+          <span class="tag-pill">Laravel</span>
+          <span class="tag-pill">PHP</span>
+          <span class="tag-pill">Cron Jobs</span>
+          <span class="tag-pill">MySQL</span>
+          <span class="tag-pill">REST APIs</span>
         </div>
-      </section>
+      </article>
 
-      <!-- PROJECTS -->
-      <section id="projects">
-        <div class="section-label">Projects</div>
+      <!-- PROJECT 4: ARABIA HOLDING -->
+      <article class="ch-card project-card">
+        <div>
+          <div class="project-top-meta">
+            <span>2020 — 2024 · REAL ESTATE ENTERPRISE</span>
+            <span>ID 004</span>
+          </div>
 
-        <div class="project-item">
-          <div class="project-img-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
-              <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
-              <line x1="12" y1="12" x2="12" y2="16" />
-              <line x1="10" y1="14" x2="14" y2="14" />
-            </svg>
+          <!-- Architectural Schematic Preview (Click to Zoom) -->
+          <div class="project-preview-wrap" data-title="Arabia Holding — High-Throughput Real Estate Portal & Redis Cache" data-id="ID 004">
+            <img src="imgs/schematic-arabia.jpg" alt="Arabia Holding Architecture Blueprint" loading="lazy" />
+            <span class="project-zoom-badge">🔍 View Blueprint</span>
           </div>
-          <div>
-            <div class="project-title">
-              Ventory — Inventory Management System
-              <span class="arrow">↗</span>
-            </div>
-            <p class="project-desc">Spring Boot system with CRUD, real-time stock tracking, role-based access control
-              (Admin/Manager/Staff), and JWT auth. Layered architecture with Controllers, Services, Repositories, DTOs,
-              and Mappers.</p>
-            <div class="tags" style="margin-top:8px">
-              <span class="tag">Java</span>
-              <span class="tag">Spring Boot</span>
-              <span class="tag">JWT</span>
-            </div>
-          </div>
+
+          <a href="https://arabia-holding.com" target="_blank" rel="noopener" class="project-title-link">
+            Arabia-Holding.com
+            <span class="arrow-icon">↗</span>
+          </a>
+
+          <p class="project-desc">
+            Corporate real estate portal with custom CRM, complete SEO tooling (meta tags, automated XML sitemaps, schema markup), dynamic project portfolios, media center, and Redis caching for high-traffic API optimization. Resolved 50+ critical SEO issues via Google Search Console.
+          </p>
         </div>
 
-        <div class="project-item">
-          <div class="project-img-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 00-3-3.87" />
-              <path d="M16 3.13a4 4 0 010 7.75" />
-            </svg>
-          </div>
-          <div>
-            <div class="project-title">
-              <a href="https://convert-em.com" target="_blank" rel="noopener">Convert-EM.com</a>
-              <span class="arrow">↗</span>
-            </div>
-            <p class="project-desc">Multi-tenant lead conversion platform with Botpress AI agents for lead qualification
-              across WhatsApp, Instagram, and Web — 8,600+ qualified leads delivered. Centralized admin panel with
-              real-time lead intelligence, human moderation, and reactivation pipeline.</p>
-            <div class="tags" style="margin-top:8px">
-              <span class="tag">Laravel</span>
-              <span class="tag">Filament</span>
-              <span class="tag">Botpress AI</span>
-              <span class="tag">Multi-tenancy</span>
-            </div>
+        <div class="tag-pills">
+          <span class="tag-pill">Laravel</span>
+          <span class="tag-pill">Redis</span>
+          <span class="tag-pill">SEO Engine</span>
+          <span class="tag-pill">Custom CRM</span>
+          <span class="tag-pill">MySQL</span>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- SECTION HEADER: THE CAREER -->
+    <div class="ch-card section-header-card" data-category="career">
+      <h2 class="section-title">The Career</h2>
+      <span class="section-counter">04 POSITIONS · CHRONOLOGICAL</span>
+    </div>
+
+    <!-- THE CAREER (Experience List) -->
+    <section class="experience-list" id="experience" data-category="career">
+
+      <!-- EXP 1 -->
+      <div class="ch-card exp-card">
+        <div class="exp-sidebar">
+          <div class="exp-date-label">2026 — Present</div>
+          <div class="exp-badge-type">Personal Project</div>
+          <div class="card-label-top" style="margin-top:6px;">EXP 001</div>
+        </div>
+        <div class="exp-main-body">
+          <h3 class="exp-role-title">
+            Backend Developer (Java) · Ventory
+            <span class="arrow-icon">↗</span>
+          </h3>
+          <div class="exp-company-sub">Inventory Management System Architecture</div>
+          <ul class="exp-bullet-list">
+            <li>Building Ventory in Java Spring Boot to master real-world enterprise backend architecture patterns.</li>
+            <li>Implemented layered architecture: Controllers, Services, Repositories, DTOs, Mappers, and custom Global Exception Handling.</li>
+            <li>Engineered domain entities for Products, Categories, Suppliers, and Stock Movements with enum-based movement types.</li>
+            <li>Features: High-throughput CRUD, real-time stock balance tracking, role-based access control (Admin/Manager/Staff), and stateless JWT auth.</li>
+          </ul>
+          <div class="tag-pills">
+            <span class="tag-pill">Java</span>
+            <span class="tag-pill">Spring Boot</span>
+            <span class="tag-pill">Spring Data JPA</span>
+            <span class="tag-pill">MySQL</span>
+            <span class="tag-pill">JWT</span>
+            <span class="tag-pill">Maven</span>
           </div>
         </div>
+      </div>
 
-        <div class="project-item">
-          <div class="project-img-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-          </div>
-          <div>
-            <div class="project-title">
-              <a href="https://ms-sportsacademy.com" target="_blank" rel="noopener">MS Sports Academy</a>
-              <span class="arrow">↗</span>
-            </div>
-            <p class="project-desc">Full operational management system for 5 branches and 600+ athletes. Covers session
-              booking with capacity management, subscription packages, automated commission-based trainer salary
-              calculations, and weekly branch reports via Cron Jobs.</p>
-            <div class="tags" style="margin-top:8px">
-              <span class="tag">Laravel</span>
-              <span class="tag">PHP</span>
-              <span class="tag">Cron Jobs</span>
-              <span class="tag">MySQL</span>
-            </div>
+      <!-- EXP 2 -->
+      <div class="ch-card exp-card">
+        <div class="exp-sidebar">
+          <div class="exp-date-label">2025 · May – Nov</div>
+          <div class="exp-badge-type">Freelance</div>
+          <div class="card-label-top" style="margin-top:6px;">EXP 002</div>
+        </div>
+        <div class="exp-main-body">
+          <h3 class="exp-role-title">
+            <a href="https://ms-sportsacademy.com" target="_blank" rel="noopener">Backend Developer · Rollinreal</a>
+            <span class="arrow-icon">↗</span>
+          </h3>
+          <div class="exp-company-sub">MS Sports Academy Operations System</div>
+          <ul class="exp-bullet-list">
+            <li>Built an end-to-end operational management system for MS Sports Academy — managing 5 branches and 600+ athletes.</li>
+            <li>Developed session booking system with real-time capacity management, reservation confirmations, and automated reminders.</li>
+            <li>Implemented packages &amp; subscriptions management engine with dynamic usage tracking and renewals.</li>
+            <li>Automated commission-based trainer salary calculations and generated automated weekly branch reports via Cron Jobs.</li>
+          </ul>
+          <div class="tag-pills">
+            <span class="tag-pill">Laravel</span>
+            <span class="tag-pill">PHP</span>
+            <span class="tag-pill">MySQL</span>
+            <span class="tag-pill">Cron Jobs</span>
+            <span class="tag-pill">RESTful APIs</span>
           </div>
         </div>
+      </div>
 
-        <div class="project-item">
-          <div class="project-img-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <path d="M3 9h18M9 21V9" />
-            </svg>
-          </div>
-          <div>
-            <div class="project-title">
-              <a href="https://arabia-holding.com" target="_blank" rel="noopener">Arabia-Holding.com</a>
-              <span class="arrow">↗</span>
-            </div>
-            <p class="project-desc">Corporate real estate portal with custom CRM, full SEO tooling (meta tags, sitemaps,
-              schema markup), dynamic project portfolios, news/media center, and Redis caching for high-traffic API
-              optimization.</p>
-            <div class="tags" style="margin-top:8px">
-              <span class="tag">Laravel</span>
-              <span class="tag">Redis</span>
-              <span class="tag">SEO</span>
-              <span class="tag">Custom CRM</span>
-            </div>
+      <!-- EXP 3 -->
+      <div class="ch-card exp-card">
+        <div class="exp-sidebar">
+          <div class="exp-date-label">2020 — Present</div>
+          <div class="exp-badge-type">Full-time</div>
+          <div class="card-label-top" style="margin-top:6px;">EXP 003</div>
+        </div>
+        <div class="exp-main-body">
+          <h3 class="exp-role-title">
+            Senior Backend Developer · Vhorus
+            <span class="arrow-icon">↗</span>
+          </h3>
+          <div class="exp-company-sub">Digital Transformation &amp; Platform Architecture</div>
+          <ul class="exp-bullet-list">
+            <li>Architected Convert-EM, a multi-tenant lead conversion platform delivering 8,600+ qualified leads for automotive clients and hitting 100% admission targets for university clients.</li>
+            <li>Integrated Botpress AI agents for autonomous lead qualification across WhatsApp, Instagram, and Web channels.</li>
+            <li>Resolved 50+ critical SEO issues via Google Search Console — increased organic traffic by 25% and reduced duplicate pages by 40%.</li>
+            <li>Developed Arabia-Holding.com real estate portal with custom CRM, automated SEO tooling, and Redis multi-layer caching.</li>
+            <li>Managed complex multi-tenant database architectures and optimized high-traffic APIs with query indexing and caching.</li>
+          </ul>
+          <div class="tag-pills">
+            <span class="tag-pill">Laravel</span>
+            <span class="tag-pill">Filament</span>
+            <span class="tag-pill">MySQL</span>
+            <span class="tag-pill">Redis</span>
+            <span class="tag-pill">Docker</span>
+            <span class="tag-pill">GitHub Actions</span>
+            <span class="tag-pill">REST APIs</span>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- SKILLS -->
-      <section id="skills">
-        <div class="section-label">Skills</div>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <div class="skill-group-name">Languages</div>
-            <div class="skill-list">
-              <span class="skill-pill">PHP</span>
-              <span class="skill-pill">Java</span>
-              <span class="skill-pill">Python</span>
-              <span class="skill-pill">SQL</span>
-              <span class="skill-pill">JavaScript</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Frameworks</div>
-            <div class="skill-list">
-              <span class="skill-pill">Laravel</span>
-              <span class="skill-pill">Spring Boot</span>
-              <span class="skill-pill">NestJS</span>
-              <span class="skill-pill">Flask</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Laravel Ecosystem</div>
-            <div class="skill-list">
-              <span class="skill-pill">Filament</span>
-              <span class="skill-pill">Backpack</span>
-              <span class="skill-pill">Livewire</span>
-              <span class="skill-pill">Laravel Echo</span>
-              <span class="skill-pill">Reverb</span>
-              <span class="skill-pill">WebSockets</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Databases</div>
-            <div class="skill-list">
-              <span class="skill-pill">MySQL</span>
-              <span class="skill-pill">PostgreSQL</span>
-              <span class="skill-pill">Redis</span>
-              <span class="skill-pill">Eloquent ORM</span>
-              <span class="skill-pill">Hibernate/JPA</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Security</div>
-            <div class="skill-list">
-              <span class="skill-pill">JWT</span>
-              <span class="skill-pill">Laravel Sanctum</span>
-              <span class="skill-pill">OAuth2</span>
-              <span class="skill-pill">Spring Security</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Architecture</div>
-            <div class="skill-list">
-              <span class="skill-pill">MVC</span>
-              <span class="skill-pill">SOLID</span>
-              <span class="skill-pill">Multi-Tenancy</span>
-              <span class="skill-pill">Factory</span>
-              <span class="skill-pill">Repository</span>
-              <span class="skill-pill">Observer</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">DevOps</div>
-            <div class="skill-list">
-              <span class="skill-pill">Docker</span>
-              <span class="skill-pill">Linux</span>
-              <span class="skill-pill">Nginx</span>
-              <span class="skill-pill">GitHub Actions</span>
-              <span class="skill-pill">Maven</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Other</div>
-            <div class="skill-list">
-              <span class="skill-pill">REST APIs</span>
-              <span class="skill-pill">Git</span>
-              <span class="skill-pill">Agile/Scrum</span>
-              <span class="skill-pill">Postman</span>
-              <span class="skill-pill">R2 Storage</span>
-              <span class="skill-pill">Cloudflare CDN</span>
-            </div>
+      <!-- EXP 4 -->
+      <div class="ch-card exp-card">
+        <div class="exp-sidebar">
+          <div class="exp-date-label">2019 — 2022</div>
+          <div class="exp-badge-type">Full-time</div>
+          <div class="card-label-top" style="margin-top:6px;">EXP 004</div>
+        </div>
+        <div class="exp-main-body">
+          <h3 class="exp-role-title">
+            Full Stack Developer · ThinkNavy
+            <span class="arrow-icon">↗</span>
+          </h3>
+          <div class="exp-company-sub">PHP &amp; Laravel Ecosystem Solutions</div>
+          <ul class="exp-bullet-list">
+            <li>Led end-to-end web engineering projects within the PHP / Laravel ecosystem for diverse business clients.</li>
+            <li>Designed and optimized SQL database structures for rapid indexing, data integrity, and performant querying.</li>
+            <li>Collaborated with cross-functional design and product teams to consistently meet technical milestones on schedule.</li>
+          </ul>
+          <div class="tag-pills">
+            <span class="tag-pill">Laravel</span>
+            <span class="tag-pill">PHP</span>
+            <span class="tag-pill">MySQL</span>
+            <span class="tag-pill">JavaScript</span>
+            <span class="tag-pill">REST APIs</span>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- CERTIFICATIONS -->
-      <section id="certifications">
-        <div class="section-label">Certifications</div>
-        <div class="cert-list">
-          <div class="cert-item">
-            <div class="cert-icon">🎓</div>
-            <div>
-              <div class="cert-name">ALX AiCE — AI Career Essentials</div>
-              <div class="cert-org">ALX Africa</div>
-            </div>
+    </section>
+
+    <!-- SECTION HEADER: THE STACK -->
+    <div class="ch-card section-header-card" data-category="stack">
+      <h2 class="section-title">The Stack</h2>
+      <span class="section-counter">08 CATEGORIES · ARCHITECTURE &amp; TOOLS</span>
+    </div>
+
+    <!-- THE STACK (Skills Matrix Modular Grid) -->
+    <section class="skills-grid-modular" id="skills" data-category="stack">
+
+      <div class="ch-card skill-category-card">
+        <div>
+          <div class="skill-cat-header">
+            <span>01</span>
+            <span>SYNTAX</span>
           </div>
-          <div class="cert-item">
-            <div class="cert-icon">☕</div>
-            <div>
-              <div class="cert-name">Spring Boot 3 Essential Training</div>
-              <div class="cert-org">LinkedIn Learning</div>
-            </div>
+          <h3 class="skill-cat-title">Languages</h3>
+        </div>
+        <div class="skill-pill-wrap">
+          <span class="skill-token">PHP</span>
+          <span class="skill-token">Java</span>
+          <span class="skill-token">Python</span>
+          <span class="skill-token">SQL</span>
+          <span class="skill-token">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="ch-card skill-category-card">
+        <div>
+          <div class="skill-cat-header">
+            <span>02</span>
+            <span>BACKEND</span>
           </div>
-          <div class="cert-item">
-            <div class="cert-icon">🎓</div>
-            <div>
-              <div class="cert-name">CS50's Introduction to Computer Science</div>
-              <div class="cert-org">Harvard University / edX</div>
-            </div>
+          <h3 class="skill-cat-title">Frameworks</h3>
+        </div>
+        <div class="skill-pill-wrap">
+          <span class="skill-token">Spring Boot</span>
+          <span class="skill-token">Laravel</span>
+          <span class="skill-token">NestJS</span>
+          <span class="skill-token">Flask</span>
+        </div>
+      </div>
+
+      <div class="ch-card skill-category-card">
+        <div>
+          <div class="skill-cat-header">
+            <span>03</span>
+            <span>ECOSYSTEM</span>
           </div>
-          <div class="cert-item">
-            <div class="cert-icon">🐍</div>
-            <div>
-              <div class="cert-name">Crash Course on Python</div>
-              <div class="cert-org">Google / Coursera</div>
-            </div>
+          <h3 class="skill-cat-title">Laravel Stack</h3>
+        </div>
+        <div class="skill-pill-wrap">
+          <span class="skill-token">Filament</span>
+          <span class="skill-token">Backpack</span>
+          <span class="skill-token">Livewire</span>
+          <span class="skill-token">Laravel Echo</span>
+          <span class="skill-token">Reverb</span>
+          <span class="skill-token">WebSockets</span>
+        </div>
+      </div>
+
+      <div class="ch-card skill-category-card">
+        <div>
+          <div class="skill-cat-header">
+            <span>04</span>
+            <span>STORAGE</span>
+          </div>
+          <h3 class="skill-cat-title">Databases &amp; Caching</h3>
+        </div>
+        <div class="skill-pill-wrap">
+          <span class="skill-token">MySQL</span>
+          <span class="skill-token">PostgreSQL</span>
+          <span class="skill-token">Redis</span>
+          <span class="skill-token">Hibernate/JPA</span>
+          <span class="skill-token">Eloquent ORM</span>
+        </div>
+      </div>
+
+      <div class="ch-card skill-category-card">
+        <div>
+          <div class="skill-cat-header">
+            <span>05</span>
+            <span>PROTECTION</span>
+          </div>
+          <h3 class="skill-cat-title">Security &amp; Auth</h3>
+        </div>
+        <div class="skill-pill-wrap">
+          <span class="skill-token">JWT</span>
+          <span class="skill-token">Spring Security</span>
+          <span class="skill-token">Laravel Sanctum</span>
+          <span class="skill-token">OAuth2</span>
+          <span class="skill-token">Role-Based Access</span>
+        </div>
+      </div>
+
+      <div class="ch-card skill-category-card">
+        <div>
+          <div class="skill-cat-header">
+            <span>06</span>
+            <span>PRINCIPLES</span>
+          </div>
+          <h3 class="skill-cat-title">Architecture Patterns</h3>
+        </div>
+        <div class="skill-pill-wrap">
+          <span class="skill-token">SOLID</span>
+          <span class="skill-token">Clean Architecture</span>
+          <span class="skill-token">Multi-Tenancy</span>
+          <span class="skill-token">Factory Pattern</span>
+          <span class="skill-token">Repository Pattern</span>
+          <span class="skill-token">Observer</span>
+        </div>
+      </div>
+
+      <div class="ch-card skill-category-card">
+        <div>
+          <div class="skill-cat-header">
+            <span>07</span>
+            <span>INFRASTRUCTURE</span>
+          </div>
+          <h3 class="skill-cat-title">DevOps &amp; Cloud</h3>
+        </div>
+        <div class="skill-pill-wrap">
+          <span class="skill-token">Docker</span>
+          <span class="skill-token">Linux</span>
+          <span class="skill-token">Nginx</span>
+          <span class="skill-token">GitHub Actions</span>
+          <span class="skill-token">Maven</span>
+          <span class="skill-token">Cloudflare CDN</span>
+        </div>
+      </div>
+
+      <div class="ch-card skill-category-card">
+        <div>
+          <div class="skill-cat-header">
+            <span>08</span>
+            <span>PROTOCOLS</span>
+          </div>
+          <h3 class="skill-cat-title">APIs &amp; Tooling</h3>
+        </div>
+        <div class="skill-pill-wrap">
+          <span class="skill-token">RESTful APIs</span>
+          <span class="skill-token">Postman</span>
+          <span class="skill-token">Git</span>
+          <span class="skill-token">Agile / Scrum</span>
+          <span class="skill-token">R2 Storage</span>
+          <span class="skill-token">Botpress AI</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION HEADER: CREDENTIALS -->
+    <div class="ch-card section-header-card" data-category="credentials">
+      <h2 class="section-title">Credentials &amp; Education</h2>
+      <span class="section-counter">05 CERTIFICATIONS · ACADEMICS</span>
+    </div>
+
+    <!-- CREDENTIALS (Certifications Grid) -->
+    <section class="credentials-grid" id="certifications" data-category="credentials">
+
+      <div class="ch-card cert-card">
+        <div class="cert-avatar-icon">🎓</div>
+        <div class="cert-details">
+          <div class="cert-title-txt">ALX AiCE — AI Career Essentials</div>
+          <div class="cert-issuer-txt">ALX Africa</div>
+          <div class="cert-id-tag">CRED · 001 · AI INTEGRATION</div>
+        </div>
+      </div>
+
+      <div class="ch-card cert-card">
+        <div class="cert-avatar-icon">☕</div>
+        <div class="cert-details">
+          <div class="cert-title-txt">Spring Boot 3 Essential Training</div>
+          <div class="cert-issuer-txt">LinkedIn Learning</div>
+          <div class="cert-id-tag">CRED · 002 · JAVA ECOSYSTEM</div>
+        </div>
+      </div>
+
+      <div class="ch-card cert-card">
+        <div class="cert-avatar-icon">🎓</div>
+        <div class="cert-details">
+          <div class="cert-title-txt">CS50's Introduction to Computer Science</div>
+          <div class="cert-issuer-txt">Harvard University / edX</div>
+          <div class="cert-id-tag">CRED · 003 · COMPUTER SCIENCE</div>
+        </div>
+      </div>
+
+      <div class="ch-card cert-card">
+        <div class="cert-avatar-icon">🐍</div>
+        <div class="cert-details">
+          <div class="cert-title-txt">Crash Course on Python</div>
+          <div class="cert-issuer-txt">Google / Coursera</div>
+          <div class="cert-id-tag">CRED · 004 · AUTOMATION &amp; DATA</div>
+        </div>
+      </div>
+
+      <!-- Education Card (Spans across or neatly integrated) -->
+      <div class="ch-card cert-card" style="grid-column: 1 / -1;">
+        <div class="cert-avatar-icon">🏛</div>
+        <div class="cert-details">
+          <div class="cert-title-txt">Bachelor of Management Information Systems (MIS)</div>
+          <div class="cert-issuer-txt">Thebes Academy · 2012–2016 · GPA 3.73 / 4.0</div>
+          <div class="cert-id-tag">ACADEMIC DEGREE · HIGHEST HONORS</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SIGNATURE CARL HAUSER FOOTER CARD -->
+    <footer class="ch-card footer-card" id="contact">
+      <div class="footer-top-section">
+        <h2 class="footer-farewell-heading" id="farewellHeading" title="Click to react!">
+          Ohhh that's all <span class="footer-emoji">🥺</span>
+        </h2>
+
+        <div class="footer-middle-row">
+          <p class="footer-note-text">
+            Just come back, I will always add more code and architectures! Till then .. let's build something scalable.
+          </p>
+
+          <div class="footer-contact-actions">
+            <a href="mailto:bishoysouser@gmail.com" class="footer-email-btn">
+              <span>Say Hello</span>
+              <span>↗</span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <div style="margin-top:48px">
-          <div class="section-label">Education</div>
-          <div class="cert-item">
-            <div class="cert-icon">🏛</div>
-            <div>
-              <div class="cert-name">Bachelor of Management Information Systems (MIS)</div>
-              <div class="cert-org">Thebes Academy · 2012–2016 · GPA 3.73 / 4.0</div>
-            </div>
-          </div>
+      <!-- Footer Quick Nav (2 columns with + icons) -->
+      <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; align-items:center;">
+        <div class="ch-nav-menu">
+          <a href="#about" class="ch-nav-link">
+            <span class="plus-icon">+</span> The Process
+          </a>
+          <a href="#projects" class="ch-nav-link">
+            <span class="plus-icon">+</span> The Systems
+          </a>
+          <a href="#experience" class="ch-nav-link">
+            <span class="plus-icon">+</span> The Career
+          </a>
+          <a href="#skills" class="ch-nav-link">
+            <span class="plus-icon">+</span> The Stack
+          </a>
         </div>
-      </section>
 
-    </main>
+        <div class="ch-socials-col" style="flex-direction:row; align-items:center; gap:20px;">
+          <a href="https://github.com/bishoySouser" target="_blank" rel="noopener" class="ch-ext-link">GitHub</a>
+          <a href="https://linkedin.com/in/bishoysouser" target="_blank" rel="noopener" class="ch-ext-link">LinkedIn</a>
+          <a href="mailto:bishoysouser@gmail.com" class="ch-ext-link">Email</a>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <span>© 2026 Bishoy Souser. All rights reserved.</span>
+        <span>Made with care in <span class="footer-location-tag">Cairo, Egypt</span></span>
+      </div>
+    </footer>
+
   </div>
 
-  <script src="js/script.js"></script>
+  <!-- LIGHTBOX MODAL FOR BLUEPRINT SCHEMATICS -->
+  <div class="lightbox-modal" id="schematicLightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close blueprint preview">&times;</button>
+      <img src="" alt="Schematic Preview" id="lightboxImg" class="lightbox-img" />
+      <div class="lightbox-caption">
+        <span id="lightboxCaptionTitle">Technical Architecture Blueprint</span>
+        <span id="lightboxCaptionId">ID 001</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js?v=2"></script>
 </body>
 
 </html>
