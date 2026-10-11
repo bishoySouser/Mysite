@@ -73,19 +73,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const goldBtn = document.getElementById('goldModeBtn');
   const savedTheme = localStorage.getItem('theme-mode');
 
-  if (savedTheme === 'gold') {
+  // Gold theme is DEFAULT unless explicitly set to light
+  if (savedTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
     document.documentElement.setAttribute('data-theme', 'gold');
   }
 
   if (goldBtn) {
     goldBtn.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
-      if (current === 'gold') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme-mode', 'default');
-      } else {
+      if (current === 'light') {
         document.documentElement.setAttribute('data-theme', 'gold');
         localStorage.setItem('theme-mode', 'gold');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme-mode', 'light');
       }
       triggerCurtainWipe();
     });
@@ -121,9 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderParticles() {
       ctx.clearRect(0, 0, width, height);
-      const isGold = document.documentElement.getAttribute('data-theme') === 'gold';
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
 
-      if (isGold) {
+      if (!isLight) {
         ctx.fillStyle = '#fbbf24';
         particles.forEach(p => {
           p.swayAngle += p.swaySpeed;
@@ -142,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ctx.globalAlpha = p.opacity;
           ctx.fill();
         });
+        ctx.globalAlpha = 1;
       }
 
       requestAnimationFrame(renderParticles);
